@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Writer-Login</title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/Login.css">
+        
+        
+        <script src = "jquery/login-jquery-1.11.1.js"></script>
+    </head>
+    <body>
+        <div class="bus_login">
+            <a href='index.html'><img  src="images/full_logo_light2.png"/></a>
+            <h1>Writer</h1>
+            <h2>Welcome Back</h2>
+            
+            
+            <form class='f1' action="php/loginWriters.php" method="post">
+                <fieldset>
+                <legend><h3>Let's get you signed in.</h3></legend>
+                    
+                    <input id='other' class='textbox' type="email" name="email" placeholder='Your Email ID' ><br>
+                    <input id='other' class='textbox' type="password" name="pass" placeholder='Password' ><br>
+                    <input  type="checkbox" name="remember" value="remember_me"> Remember me &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+                    <a id="forgot" href="#" >Forgot password?</a>
+                    <br>
+                    
+                    <button id='create' type="submit" >Login</button><br/>
+                    
+                </fieldset>
+                
+                
+                
+                
+            </form>
+            <form class='forgot_pass' action="#" method="post">
+                <h3>Enter your email or username below and we will<br> send you a link to reset your password</h3>
+                <input id='other' class='textbox' type="text" name="email" placeholder='Your Email ID' ><br>
+                <button id='create' type="submit" >Send Password Reset Instructions</button>
+                
+            </form>
+    </body>
+</html>

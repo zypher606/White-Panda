@@ -1,0 +1,387 @@
+#backgrnd
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 600px;
+    width: 100%;
+    
+    
+    z-index: 40;
+    text-align: center;
+    font-size: 2.2em;
+    
+    color: #fff;
+    overflow: hidden;
+}
+
+#backgrnd h1
+{
+    font-family: nesia;
+}
+#backgrnd img
+{
+    position: fixed;
+    top: -20%;
+    left: -8px;
+    width:1400px;
+    z-index: -100;
+    -webkit-filter:blur(2.2px);
+    
+}
+
+/*
+#header
+{
+    background: rgba(203,220,255,0.2);
+/*    background: rgba(216,219,185,0.2);*//*
+    height: 70px;
+    transition: 0.7s;
+    transition: height 0.7s;
+    z-index: 102;
+}
+
+.nav-bar a
+{
+    color: #002542;
+}
+
+.nav-bar a:hover
+{
+    color: orange;
+}
+
+#but
+{
+    height:48%;
+    
+    transition: 0.7s;
+    
+    
+}
+
+
+#but img
+{
+    height: 80%;
+    transition: height 0.7s;
+}
+*/
+
+
+.prod_info
+{
+    position: absolute;
+    top: 550px;
+    left: 0%;
+    height: 670px;
+    width: 100%;
+    z-index: 50;
+    overflow: hidden;
+/*    background: #f3f3f3;*/
+/*    background: #01365f;*/
+    background-image: url(../images/the-background-387076.jpg);
+    
+    
+}
+
+
+
+
+
+.prod_info .prod_info_bar
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 134px;
+    width: 100%;
+    
+    background: #fff;
+    
+    text-align: center;
+    
+    
+    
+}
+
+.prod_info .prod_info_bar div
+{
+    
+    
+    top:7%;
+    width: 14.2%;
+    float: left;
+    height: 100%;
+    font-family: Champ;
+    
+  
+    
+}
+/*
+.prod_info .prod_info_bar :nth-child(1)
+{
+    
+    
+    left: 0%;
+    
+    
+  
+    
+}
+
+.prod_info .prod_info_bar :nth-child(2)
+{
+      
+    left: 12.5%;   
+}
+
+.prod_info .prod_info_bar :nth-child(3)
+{
+      
+    left: 25%;   
+}
+
+.prod_info .prod_info_bar :nth-child(4)
+{
+      
+    left: 37.5%;   
+}
+
+.prod_info .prod_info_bar :nth-child(5)
+{
+      
+    left: 50%;   
+}
+
+.prod_info .prod_info_bar :nth-child(6)
+{
+      
+    left: 62.5%;   
+}
+
+.prod_info .prod_info_bar :nth-child(7)
+{
+      
+    left: 75%;   
+}
+
+.prod_info .prod_info_bar :nth-child(8)
+{
+      
+    left: 87.5%;   
+}
+
+*/
+.prod_info #selector_bar 
+{
+    position: absolute;
+    top: 18.9%;
+    left: 0%;
+    width: 100%;
+    height: 1.1%;
+    z-index: 100;
+}
+
+.prod_info #selector_bar img
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 14.2%;
+    height:100%;
+}
+
+
+.prod_info .prod_info_bar div img
+{
+    
+    margin-top: 5%;
+    height: 47%;
+    width: auto;
+    
+}
+
+.ratings
+{
+    position: absolute;
+    top: 21%;
+    height: 450px;
+    width:100%;
+    
+}
+
+.ratings #specifications
+{
+    position: absolute;
+    
+    top: 15%;
+    right: 60%;
+    height: 350px;
+    width: 240px;
+    padding: 1% 1% 0% 1%;
+    font-family: Champ;
+/*    background: #46629e;*/
+/*    background: rgba(16,17,19,0.4);*/
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    
+    border-color: #fff;
+/*    border-radius: 20px;*/
+    
+    
+    
+}
+
+
+/*
+.ratings #specifications h1
+{
+    text-align: center;
+}
+*/
+
+.ratings .rating_inr
+{
+    position: absolute;
+    
+    top: 15%;
+    left:60%;
+    height: 350px;
+    width: 240px;
+    padding: 1% 1% 0% 1%;
+    font-family: Champ;
+/*    background: #46629e;*/
+/*    background: rgba(20,4,70,0.5);*/
+    color: #fff;
+    text-align: center;
+/*    border: solid;*/
+    border-width: 1px;
+    border-color: #fff;
+    background: rgba(0,0,0,0.4);
+    
+    
+/*    border-radius: 20px;*/
+}
+
+
+
+.ratings .rating_inr #sub1
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 70px;
+   
+    transition: 0.6s;
+    
+}
+
+
+.ratings .rating_inr #sub2
+{
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    width: 100%;
+    height: 30%;
+    
+    
+}
+
+.ratings .rating_inr #sub3
+{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    height: 30%;
+    
+}
+
+.ratings .rating_inr #sub4
+{
+    position: absolute;
+    top: 85%;
+    left: 25%;
+    width: 50%;
+    height: 8%;
+    
+    margin-top: -2%;
+    
+    
+    
+    
+}
+.ratings .rating_inr #sub4 h3
+{
+
+    border-radius: 4px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    transition: 0.6s;
+    
+}
+
+.ratings .rating_inr #sub4 h3 a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+.ratings .rating_inr:hover #sub1, .ratings .rating_inr:hover #sub4 h3
+{
+    background: rgba(46,177,97,0.8);
+}
+
+
+
+
+
+
+
+
+
+
+/*FOOTER-----------------------*/
+#footer
+{
+    
+    position: absolute;
+    top: 1200px;
+    height: 50px;
+    width: 100%;
+    left: 0%;
+     background: #002542; /* Old browsers */
+    background: -moz-linear-gradient(left,  #002542 0%, #1d3e55 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#002542), color-stop(100%,#1d3e55)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* IE10+ */
+    background: linear-gradient(to right,  #002542 0%,#1d3e55 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002542', endColorstr='#1d3e55',GradientType=1 ); /* IE6-9 */
+    z-index: 100;
+    color: #fff;
+
+}
+#footer-links
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 15px;
+}
+#footer-links>a
+{
+    color: black;
+    font-family: PT Sans, sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+#footer-links>a:hover
+{
+    color: #ababab;
+}

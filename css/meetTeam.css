@@ -1,0 +1,266 @@
+.meet_team
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 690px;
+    width: 100%;
+    
+    text-align: center;
+    overflow: hidden;
+}
+
+.meet_team img
+{
+    position: absolute;
+    top: -10%;
+    left: 0%;
+    width: 1350px;
+
+    z-index: -10;
+    
+}
+
+.meet_team p
+{
+    margin-top: 20%;
+    font-size: 4em;
+    font-family: 'champ';
+    z-index: 10;
+/*    color: #2eb161;*/
+    color: #fff;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 50px;
+}
+
+
+.mentors
+{
+    position: absolute;
+    left: 0;
+    top: 690px;
+    width: 100%;
+    height: 500px;
+    background: #2eb161;
+    text-align: center;
+}
+
+
+.mentors h1
+{
+    color: #fff;
+    font-family: champ;
+    font-size: 38px;
+    border-bottom: solid;
+    border-width: 1.4px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.mentors div
+{
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    margin-left: 80px;
+    margin-right: 80px;
+    float: left;
+    top:120px;
+    border-radius: 800px;
+    color: #fff;
+    background: #2eb161;
+    font-family: nesia;
+    
+}
+
+.mentors div p
+{
+    position: absolute;
+    overflow: hidden;
+    height: 220px;
+    width: 220px;
+    margin-left: 10px;
+    border-radius: 800px;
+    background-color: #fff;
+    top: -16px;
+    left: 0px;
+}
+
+.mentors div p img
+{
+    margin-top: 0px;
+    height: 220px;
+}
+.mentors div h2
+{
+    margin-top: 250px;
+}
+
+.mentors div h3
+{
+    margin-top: -20px;
+}
+
+.mentors div h3 img
+{
+    height: 30px;
+    margin-top: 5px;
+}
+
+
+.mentors .ment1
+{
+    left: 8%;   
+}
+
+.mentors .ment2
+{
+    left: 35%;   
+}
+.mentors .ment3
+{
+    left: 62%;   
+}
+
+.team_intro
+{
+    position: absolute;
+    top: 1190px;
+    height: 75%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    font-family: nesia;
+}
+
+
+.team_intro div
+{ 
+    position: absolute;
+    height: 150px;
+     
+}
+
+.team_intro .about
+{
+    width: 480px;
+    top: 123px;
+    height: 400px;
+    padding: 20px 20px 20px 20px ;
+/*    background: rgba(46,177,97,0.6);*/
+/*    background: #27e1bc;*/
+    background: #ded9ef;
+/*    color: #fff;*/
+    color: black;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.team_intro .about h2 span
+{
+    margin-top: -0px;
+}
+.team_intro .about img
+{
+    height: 90px;
+}
+.team_intro .members
+{
+    left: 600px;
+    width:  650px;
+}
+
+.team_intro .members h1
+{
+    margin-right: 140px;
+    margin-top: 40px;
+}
+
+.team_intro .members div
+{
+    position: static;
+    width: 160px;
+    height: 160px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 130px;
+    border-radius: 500px;
+/*    background: #f2e9ad;*/
+}
+
+.team_intro .members div h3
+{
+    margin-top: 165px;
+}
+
+.team_intro .members div h4
+{
+    margin-top: -20px;
+}
+
+.team_intro .members div p
+{
+    height: 160px;
+    width: 160px;
+  
+    border-radius: 500px;
+    margin-top:1px;
+    margin-left: 0px;
+    overflow: hidden;
+}
+
+.members div p
+{
+    position: absolute;
+}
+.team_intro .members div p img
+{
+    height: 165px;
+}
+
+
+
+
+
+#footer
+{
+    position:absolute;
+    top:2100px;
+/*    top:3540px;*/
+    left: 0%;
+    height: 7.1%;
+    width: 100%;
+     
+    
+    background: -moz-linear-gradient(left,  #002542 0%, #1d3e55 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#002542), color-stop(100%,#1d3e55)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* IE10+ */
+    background: linear-gradient(to right,  #002542 0%,#1d3e55 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002542', endColorstr='#1d3e55',GradientType=1 ); /* IE6-9 */
+    background: rgba(0, 32, 58, 1);
+
+}
+#footer-links
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 31%;
+}
+#footer-links>a
+{
+    color: #fff;
+    font-family: PT Sans, sans-serif;
+    text-decoration: none;
+}
+#footer-links>a:hover
+{
+    color: #ababab;
+}

@@ -1,0 +1,25 @@
+.side-nav
+{
+    position: fixed;
+    top: 58%;
+    right: 1.5%;
+    z-index: 9999;
+}
+
+.side-nav .bullet
+{
+    display: block;
+    border-radius: 50%;
+	width: 15px;
+	height: 15px; 
+    background-color: rgba(0, 32, 58, 0.6);
+    margin-top: 10px;
+    transition: 0.4s;
+}
+
+
+.side-nav .bullet:hover
+{
+    background-color: rgba(46, 117, 97, 0.85); 
+}
+

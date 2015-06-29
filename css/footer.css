@@ -1,0 +1,39 @@
+#footer
+{
+    position:absolute;
+    top:2800px;
+/*    top:3540px;*/
+    left: 0%;
+    height: 7.1%;
+    width: 100%;
+     
+    
+    background: -moz-linear-gradient(left,  #002542 0%, #1d3e55 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#002542), color-stop(100%,#1d3e55)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* IE10+ */
+    background: linear-gradient(to right,  #002542 0%,#1d3e55 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002542', endColorstr='#1d3e55',GradientType=1 ); /* IE6-9 */
+    background: rgba(0, 32, 58, 1);
+
+}
+#footer-links
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 31%;
+}
+#footer-links>a
+{
+    color: #fff;
+    font-family: PT Sans, sans-serif;
+    text-decoration: none;
+}
+#footer-links>a:hover
+{
+    color: #ababab;
+}

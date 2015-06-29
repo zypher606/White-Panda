@@ -1,0 +1,546 @@
+
+
+.nav_bar-writer
+{
+    position: absolute;
+    top: 5px;
+    left: 7%;
+    height:auto;
+    width: 86%;
+    
+    font-family: 'PT sans';
+    
+}
+
+.nav_bar-writer ul li
+{
+    list-style:none;
+    float: right;
+    padding: 0 30px; 0 20px;
+    font-family: 'PT sans';
+}
+
+.nav_bar-writer ul li:hover
+{
+    color:#002542;
+}
+
+.nav_bar-writer ul li a
+{
+    text-decoration:none;
+    color: #2eb161;
+}
+
+.nav_bar-writer ul li img
+{
+    height: 45px;
+    margin-top: -13px;
+    
+}
+
+
+.nav_bar-writer ul #logo
+{
+    float: left;
+}
+.nav_bar-writer ul #logo img
+{
+    
+    margin-left: -63px;    
+    height: 38px;
+    margin-top: 0px;
+}
+
+.accnt
+{
+    transform: rotateX(90deg);
+}
+.accnt li
+{
+    padding-right: 0;
+}
+.nav_bar-writer ul li ul
+{
+    padding-top: 14px;
+    float: right;
+}
+
+.nav_bar-writer ul li ul a li
+{
+    background:#2eb161;
+    color: #fff;
+    width: 100%;
+    float: left;
+    padding: 6px 0px 6px 0px;
+    transition: 0.3s;
+}
+/*-----------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.business_main
+{
+    position: absolute;
+    height: 400px;
+    width: 86%;
+    top: 155px;
+    left: 7%;
+    
+    
+    
+}
+
+
+.business_main .business_tab
+{
+    position: absolute;
+    top: 0%;
+    height: 153px;
+    width: 175px;
+    left: 0;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 8px;
+    border-color: #2eb161;
+    
+    
+/*    background: orange;*/
+}
+
+.business_main .business_tab ul
+{
+    margin-left: -42px;
+}
+.business_main .business_tab ul li
+{
+    list-style: none;
+    font-size: 15px;
+    padding: 2px 0 2px 8px;
+    margin: 2px 0 2px 0;
+    font-family:sans-serif;
+    font-weight: 100;
+    transition: 0.2s;
+    
+
+}
+
+.business_main .business_tab ul a
+{
+    text-decoration: none;
+    color: black;
+    
+  
+    
+}
+.business_main .business_tab ul a li:hover
+{
+    
+    border-left: solid;
+    border-width: 4px;
+    border-color: #2eb161;
+    transition: 0.3s;
+}
+
+.tab_result
+{
+    position: absolute;
+    top: 0;
+    left: 190px;
+    height: 400px;
+    width: 81.2%;
+    border-top: solid;
+    border-width: 1.2px;
+    border-color: #2eb161;
+    font-family: monospace;
+    
+}
+
+.tab_result div
+{
+    margin-left: 35px;
+    display: none;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+#welcome
+{
+    display: block;
+    text-align: center;
+    color: #2eb161;
+    
+
+}
+
+
+
+#welcome h5 img
+{
+    position: static;
+    width: 320px;
+    
+}
+
+
+
+
+
+
+
+/*order now tab--------------*/
+
+.tab_result .order_now
+{
+    height: 600px;
+/*    border: solid;*/
+    display: none;
+}
+
+
+/*status bar-------------*/
+.tab_result .order_now #ord_tab
+{
+    
+    margin-left: -3px;
+    display: block;
+    width: 100%;
+
+    height: 40px;
+}
+
+
+.tab_result .order_now #ord_tab ul
+{
+    margin-left: -40px;
+    margin-top: -12.5px;
+    width: 105%;
+
+}
+.tab_result .order_now #ord_tab ul a li
+{
+    
+   
+    float: left;
+    font-size: 17px;
+    
+    width: 31%;
+    text-align: center;
+    
+    padding-top: 0.5%;
+    height: 25px;
+    
+}
+
+
+.tab_result .order_now #ord_tab ul a
+{
+    color: black;
+}
+
+.tab_result .order_now #ord_tab ul a li img
+{
+    height: 29px;
+    margin-top: -4px;
+    float: right;
+    margin-right: -0.5px;
+    
+}
+
+#format li
+{
+    background: #2eb161;
+    color: #fff;
+    transition: 0.3s;
+    
+}
+#requirement li,#pay li
+{
+    background: #c6c6c6;
+    transition: 0.3s;
+
+}
+/*--------------------*/
+
+
+
+
+
+
+
+
+
+
+/*select format--------div*/
+.tab_result .order_now .sel_format
+{
+/*    border: solid;*/
+    width: 100%;
+    height: 500px;
+    margin-left: -3px;
+    margin-top: 10px;
+    display: block;
+}
+
+.tab_result .order_now .sel_format .c1
+{
+    
+    width: 43%;
+    list-style: none;
+    font-size: 15px;
+    float: left;
+}
+
+.tab_result .order_now .sel_format .c1 li
+{
+    
+    padding: 0% 0 2px 60px;
+    margin-top: 15px;
+}
+
+.tab_result .order_now .sel_format .c1 li p
+{
+    margin-top: -35px;
+    margin-left: 60px;
+}
+
+.tab_result .order_now .sel_format .c1 li h4
+{
+    background: #2eb161;
+    float: right;
+    margin-top: -43px;
+    padding: 5px 20px 5px 20px;  
+    border-radius: 4.5px;
+    color: #fff;
+    transform: rotateX(90deg);
+    transition: 0.3s;
+}
+
+
+.tab_result .order_now .sel_format .c1 li p span
+{
+    font-size: 18px;
+    font-family:sans-serif;
+    font-weight: 700;
+    color: #2eb161;
+}
+.tab_result .order_now .sel_format .c1 li img
+{
+    position: relative;
+    height: 50px;
+    top: 20px;
+    left: -30px;
+}
+
+
+.tab_result .order_now .sel_format .c2
+{
+    
+    width: 43%;
+    list-style: none;
+    font-size: 15px;
+    float: left;
+}
+
+.tab_result .order_now .sel_format .c2 li
+{
+   
+    padding: 0% 0 2px 60px;
+    margin-top: 15px;
+}
+
+.tab_result .order_now .sel_format .c2 li p
+{
+    margin-top: -35px;
+    margin-left: 60px;
+}
+
+.tab_result .order_now .sel_format .c2 li h4
+{
+    background: #2eb161;
+    float: right;
+    margin-top: -43px;
+    padding: 5px 20px 5px 20px;  
+    border-radius: 4.5px;
+    color: #fff;
+    transform: rotateX(90deg);
+    transition: 0.3s;
+}
+
+.tab_result .order_now .sel_format .c2 li p span
+{
+    font-size: 18px;
+    font-family:sans-serif;
+    font-weight: 700;
+    color: #2eb161;
+}
+.tab_result .order_now .sel_format .c2 li img
+{
+    position: relative;
+    height: 50px;
+    top: 20px;
+    left: -30px;
+}
+
+
+.tab_result .order_now .sel_format ul li:hover h4
+{
+    transform:rotateX(0deg);
+    transition: 0.3s;
+}
+
+.tab_result .order_now .sel_format ul li:hover
+{
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #2eb161;
+/*    border-color: #4829a2;*/
+}
+
+
+#proceedPay, #payNow
+{
+    background-color: #2eb161;
+    font-family: nesia;
+    font-size: 17px;
+    border-color: #2eb161;
+    height: 34px;
+    width: 250px;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+
+}
+
+#proceedPay:hover , #payNow:hover
+{
+    border-width: 4px;
+}
+/*---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*select requirement-----------------------------------*/
+.tab_result .order_now .content_requirement
+{
+    width: 100%;
+    height: 500px;
+    margin-left: -3px;
+    margin-top: 20px;
+}
+
+.tab_result .order_now .content_requirement select 
+{
+    width: 275px;
+    height: 30px;
+    font-size: 17px;
+    border-color: #2eb161;
+
+}
+
+
+#textbox
+{
+    width: 700px;
+    height: 30px;
+    font-size: 17px;
+    border-color: #2eb161;
+    padding-left: 20px;
+    border-width: 1px;
+}
+
+.goal
+{
+    text-align: center;
+    width: 750px;
+}
+#goal 
+
+{
+    
+    font-size: 15px;
+    border:solid;
+    padding: 1.4% 2% 1.4% 2%;
+    margin-left: 30px;
+    margin-top: 60px;
+    border-radius: 27px;
+    text-align: center;
+    font-family: nesia;
+    border-width: 1px;
+}
+
+
+/*----------------------------------*/
+
+
+
+
+
+
+
+
+
+/*Received content----------------*/
+.received_content
+{
+    text-align: center;
+    color: #2eb161;
+}
+
+.received_content img
+{
+    margin-top:-112px;
+}
+
+
+/*------FOOTER--------*/
+.foot
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #d9ccff;
+    top: 2800px;
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 13px;
+}
+
+.foot a
+{
+    text-decoration: none;
+    color:black;
+}

@@ -1,0 +1,395 @@
+.how_intro
+{
+    position: absolute;
+    top: 0%;
+
+    height: 420px;
+    width: 100%;
+    left: 0%;
+    text-align: center;
+    overflow: hidden;
+  
+}
+
+.how_intro h1
+{
+    margin-top:13%;
+    font-size: 65px;
+    font-family: 'PT Sans';
+    color: #fff;
+    
+}
+
+.how_intro img
+{
+    position: absolute;
+    width: 100%;
+    top: -25px;
+    left: 0;
+    z-index: -20;
+}
+
+#front_img
+{
+    position: absolute;
+    top: 420px;
+    left: 0;
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+}
+
+#front_img img
+{
+    margin-top: 40px;
+}
+.how_start
+{
+    position: absolute;
+    top: 1380px;
+    left: 0%;
+    height: 214px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 50;
+    text-align: center;
+    color: #fff;
+    font-family: 'PT sans';
+    font-size: 90%;
+    
+}
+
+.how_start img
+{
+    height: 65%;
+    margin-top:35px;
+    
+}
+
+.how_start #get_strt
+{
+    position: absolute;
+    top: 32%;
+    left: 35%;
+    background-color: #002542;
+    padding: 0.5% 1% 0.5% 1%;
+    border-radius: 3px;
+    
+}
+
+.how_start #strt_business
+{
+    position: absolute;
+    left: 55.9%;
+    top: 6%;
+    color: #fff;
+    border: solid;
+    border-color: #002542;
+/*    background-color: #002542;*/
+    padding: 0.5% 1% 0.5% 1%;
+    overflow: hidden;
+    border-radius: 2px;
+    border-width: 2.5px;
+    transition: 0.3s;
+    
+    
+    
+}
+
+.how_start #strt_business img
+{
+    position: absolute;
+    left: 0%;
+    top: -3px;
+    height: 120%;
+    width: 120%;
+    z-index: -30;
+    overflow: hidden;
+    transition: 0.3s;
+    margin-top: 0;
+}
+
+.how_start a #strt_business:hover> img
+{
+    transform: rotateX(90deg);
+  
+   
+   
+}
+
+.how_start a #strt_business:hover
+{
+    color: #2eb161;
+   
+   
+}
+
+.how_start #strt_writer
+{
+    position: absolute;
+    top: 56%;
+    left: 55.9%;
+/*    background-color: #002542;*/
+    padding: 0.5% 1% 0.5% 1%;
+    color: #fff;
+    border: solid;
+    border-color: #002542;
+    overflow: hidden;
+    border-radius: 2px;
+    border-width: 2.5px;
+    transition: 0.3s;
+    
+}
+
+.how_start #strt_writer img
+{
+    position: absolute;
+    left: 0%;
+    top: -3px;
+    height: 120%;
+    width: 120%;
+    z-index: -30;
+    overflow: hidden;
+    margin-top: 0;
+    transition: 0.3s;
+    
+}
+
+.how_start a #strt_writer:hover> img
+{
+    transform: rotateX(90deg);
+   
+   
+   
+}
+
+.how_start a #strt_writer:hover
+{
+    color: #2eb161;
+}
+
+.we_assure
+{
+    position: absolute;
+    top:1590px;
+    left: 0%;
+    height: 670px;
+    width: 100%;
+    background-image: url(../images/background-618226.png);
+    text-align: center;
+    font-family: 'pt sans';
+}
+
+.we_assure h1
+{
+    border-bottom: solid;
+    border-bottom-color: white;
+    border-width: 1px;
+    margin-left: 30%;
+    margin-right: 30%;
+    color: #002542;
+    font-family: nesia;
+}
+
+.we_assure div
+{
+    position: absolute;
+    top:18%;
+    height: 200px;
+    width:25%;
+    
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+/*    border-radius: 2px;*/
+}
+
+.we_assure div img
+{
+    height: 30px;
+}
+.we_assure div h4
+{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.we_assure #technology
+{
+    left: 21%;
+    top: 363px;
+    height: 285px;
+}
+
+.we_assure #revision
+{
+    right: 21%;
+    top: 363px;
+    height: 285px;
+}
+
+.we_assure #quaity
+{
+    width:58%;
+    left: 21%;
+    height: 250px;
+    top:100px;
+}
+
+.we_assure #quaity div
+{
+    width: 80%;
+    background: transparent;
+    top: 60px;
+    left: 10%;
+}
+
+
+
+
+
+
+
+
+.how_pro
+{
+    position: absolute;
+    top: 670px;
+    left: 0%;
+    height: auto;
+/*    overflow: hidden;*/
+    width: 100%;
+    
+    text-align: center;
+    z-index: -100;
+    color: #fff;
+/*    color: #002542;*/
+    font-family: cursive;
+}
+
+
+.how_pro #how_back
+{
+    
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 1400px;
+    z-index: -100;
+    -webkit-filter:blur(2.1px);
+    
+}
+
+.how_pro #system1
+{
+    
+    position: absolute; 
+    top: 60px;
+    left: 0%;
+    width: 58%;
+    
+    height :600px;
+    
+    z-index: 100;
+    text-align: right;
+    
+    border-right: solid;
+/*    border-right-color: #002542;*/
+    border-right-width: 1.3px;
+    
+    
+}
+
+
+
+.how_pro #system1 img
+{
+    position: absolute;
+    height:95%;
+    left: 90px;
+    margin-top: -18px;
+
+}
+
+.how_pro #system2
+{
+    position: absolute;
+    margin-top: 60px;
+    width: 40%;
+    left: 58%;
+    
+    height :600px;
+    
+    z-index: 50;
+    text-align: left;
+    
+    
+}
+
+.how_pro #system2 h1
+{
+    
+}
+
+
+.how_pro #system2 img
+{
+    
+    right: 20px;
+    height:94%;
+    margin-top: -38px;
+    
+}
+.how_pro #how_layout
+{
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+
+
+
+
+
+
+/*FOOTER--------------------------------------*/
+#footer
+{
+    
+    position: absolute;
+    top: 2257px;
+    height: 50px;
+    width: 100%;
+    left: 0%;
+     background: #002542; /* Old browsers */
+    background: -moz-linear-gradient(left,  #002542 0%, #1d3e55 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#002542), color-stop(100%,#1d3e55)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* IE10+ */
+    background: linear-gradient(to right,  #002542 0%,#1d3e55 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002542', endColorstr='#1d3e55',GradientType=1 ); /* IE6-9 */
+    z-index: 100;
+    color: #fff;
+
+}
+#footer-links
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 15px;
+}
+#footer-links>a
+{
+    font-family: PT Sans, sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+#footer-links>a:hover
+{
+    color: #ababab;
+}

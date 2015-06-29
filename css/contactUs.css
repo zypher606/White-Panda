@@ -1,0 +1,31 @@
+#contact_us
+{
+    position: fixed;
+    background: #ff5e2c;
+    top:48%;
+    left: -2.1%;
+    z-index: 120;
+    color: #fff;
+    font-family: 'pt sans';
+    
+    transform: rotateZ(90deg);
+    padding: 1% 1% 0.8% 1%;   
+    
+}
+
+#contact_us img
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background: #c13f12;
+    z-index: -10;
+    transition: 0.5s;
+}
+
+#contact_us:hover img
+{
+    transform: translateY(45px);
+}
