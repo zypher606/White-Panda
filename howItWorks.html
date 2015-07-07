@@ -1,177 +1,98 @@
 <html>
-    <head>
-        
-        <title>How It Works- White Panda</title>
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        
-        
-        <link rel="stylesheet" type="text/css" href="css/header.css">
-        <link rel="stylesheet" type="text/css" href="css/side-nav.css">
-        <link rel="stylesheet" type="text/css" href="css/howItWorks.css">
-        <link rel="stylesheet" type="text/css" href="css/contactUs.css">
-        
-        <script src = "jquery/jquery-1.11.1.js"></script>
-        <script src = "js/header.js"></script>
-    </head>
-    
-    <body>
-        <div id = "header">
-            <a id = "home" href="index.html">
-                <img id = "opaque" src="images/full_logo_white.png"/>
-            </a>
-            <div class = "nav-bar">
-                <ul>
-                    
-                    <li><a href="#">Login</a>
-                        <ul>
-                            <li><a href="businessLogin.html"><span>Business</span></a></li>
-                            <li><a href="writerLogin.html"><span>Writer</span></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Sign Up</a>
-						<ul>
-                            <li><a href="php/businessSignUp.php"><span>Business</span></a></li>
-                            <li><a href="php/writerSignUp.php"><span>Writer</span></a></li>
-                        </ul>
-                    </li>
-<!--                    <li><a href='productsAndPricing.html'>Pricing</a></li>-->
-                    <li style="height:12px; background-color:white; "><a style='color:black' href='howItWorks.html'>How It Works</a></li>
-                    <li><a href='meetTheTeam.html'>About Us</a></li>
-                    
-                </ul>
-                
-            </div>
+	<head>
+		<title>WhitePanda - Content. Delivered.</title>
+		<meta content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/default.css" rel="stylesheet">
+		<link href="css/component.css" rel="stylesheet">
+		<link href="css/comp.css" rel="stylesheet">
+		<link href="css/demo.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link href="css/header.css" rel="stylesheet">
+		<!--<link href="css/index.css" rel="stylesheet">-->
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top" style="background:rgb(14,49,75); font-family:home;" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img id="opaque" src="images/full_logo_white.png" height="44.6" width="192.26"/></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+							<li><a href="meetTheTeam.html">ABOUT US</a></li>
+							<li><a href="howitworks.html">HOW IT WORKS</a></li>
+							<li><a href="productandpricing.html">PRICING</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									SIGN UP<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="php/businessSignUp.html">BUSINESS</a></li>
+									<li><a href="php/writerSignUp.html">WRITER</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									LOGIN<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="businessLogin.html">BUSINESS</a></li>
+									<li><a href="writerLogin.html">WRITER</a></li>
+								</ul>
+							</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+		</nav>
+		
+		<div>
+			<img class="img-responsive" id="top_background" src="images/how_back.png" />
+		</div>
+		
+		<div>
+			<img class="img-responsive center-block" src="images/Icons.png"  />
+		</div>
+		
+		<div>
+			<img class="img-responsive" id="top_background" src="images/apple-691282.png" />
+		</div>
+		
+		<div>
+			<img class="img-responsive" id="top_background" src="images/background-618226.png" height="auto;"/>
+		</div>
 
-            <div class="side_menu">
-                <ul>
-                    <li id="home"><a href="index.html">HOME</a></li>
-                    <li id="prod&pric"><a href="productsAndPricing.html">PRODUCT RATINGS</a></li>
-                    <li id="how_it"><a href="howItWorks.html">HOW IT WORKS </a></li>
-                    
-                  
-                    <li id="who_we_r"><a href="meetTheTeam.html">MEET THE TEAM</a></li>
-                    
-                   
-                    <li id="bl">BLOGS</li>
-                    <li ><a id="b1" href="#">FAQS <img id='ro' src="images/down_arrow.png"/></a>
-                        <ul id="list1">
-                            
-                            <li>BUSINESS FAQS</li>
-                            <li>WRITER FAQS</li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </div>
-
-        </div>
-        
-        
-        
-        
-        
-        
-        <!-- Contact us  ------------------------------------------->
-        
-        <a href='#'>
-            <div id="contact_us">
-            
-                    <img src='images/rotate2.png'/>
-                    Contact Us
-            </div>
-        </a>
-<!--        ------------------------------------------------>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <!------------------------------------------>
-        
-        <div class="how_intro">
-            <img src="images/how_back.jpg"/>
-            <h1>How It Works</h1>
-            
-            
-        </div>
-        
-        <div id="front_img"><img  src="images/Icons.png"></div>
-        
-<!--
-        <div class="how_start">
-            <a href="#"><h3 id='strt_business'>BUSINESS<img src="images/rotate.png"/></h3></a>
-            
-            <img src="images/startDivision.png"/>
-            <h3 id="get_strt">GET STARTED</h3> 
-            <a href="#"><h3 id="strt_writer">WRITERS<img src='images/rotate.png'/></h3></a>
-            <br/><br/>
-            
-        </div>
--->
-        
-        
-        
-        
-        <div class='how_pro'>
-            <img  id='how_back' src="images/apple-691282.jpg"/>
-            
-            <div id='system1'>
-                <h1> BUSINESS &nbsp;  &nbsp;&nbsp; </h1>
-                <img src="images/howItWorks_layout1.png"/>
-            </div>
-            
-            <div id='system2'>
-                <h1>&nbsp; &nbsp; &nbsp; WRITERS</h1>
-                <img src="images/howItWorks_layout2.png"/>
-            </div>
-            
-
-        </div>
-        
-        <div class="we_assure">
-            <br>
-            <h1>WE ASSURE</h1>
-            
-            <div id="quaity">
-                <h2>Quality Control<hr/></h2>
-                
-                <div >
-                <h4>Since quality is our top priority, we have designed a complex series of tests to ensure only the best writers gain access to your projects. And since that is not always enough, we have also rounded up a team of copy-editors to gleefully point out work hard to fix the rare instances of bad writing, factual errors and plagiarism that may occasionally sneak in. However, all this happens behind the scenes. So, all you see is perfect copy.</h4>
-                </div>
-                
-            </div>
-            
-            <div id="technology">
-                <h2>Technology<hr/></h2>
-             
-                <h4>Delivering high quality-content to clients is our number one priority. Out team of copy editors checks for spelling, palgarism, and more.</h4>
-            </div>
-            
-            <div id="revision">
-                <h2>72 hours revision period<hr/></h2>
-                <h4>As much as we hate to admit it, sometimes, glitches do occur for reasons beyond our control. Which is why we offer all our clients a 72 hour revision period. If you are not satisfied with any aspect of the content we have sent you, please send it back with instructions, and we will send u a reworked copy.</h4>
-            </div>
-            
-           
-            
-        </div>
-        
-        <div id = "footer">
-            <div id = "footer-links">
-                <a href = "privacy.html">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href = "termsUse.html">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href = "writersAgreement.html">Writers' Privacy Agreement</a><br/>
-            </div>
-        </div>
-    </body>
+		<footer style="background:rgb(14,49,75); padding:20px;">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div class="row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<a href="privacy.html" class="footer_link" style="font-size:1.2em">Privacy</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<a href="termsUse.html" class="footer_link" style="font-size:1.2em">Terms of Use</a>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<a href="writersAgreement.html" class="footer_link" style="font-size:1.2em">Writer's Policy Agreement</a>
+							</div>
+						</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+			
+			</div>
+		<footer>
+	</body>
+	
+	<script src="http://code.jquery.com/jquery.js""></script>
+	<script src="js/bootstrap.min.js"></script>
+	
 </html>

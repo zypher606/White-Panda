@@ -1,43 +1,102 @@
 <html>
-    <head>
-        <title>Business-Login</title>
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/Login.css">
-        
-        
-        <script src = "jquery/login-jquery-1.11.1.js"></script>
-    </head>
-    <body>
-        <div class="bus_login">
-            <a href='index.html'><img  src="images/full_logo_light2.png"/></a>
-            <h1>Business</h1>
-            <h2>Welcome Back</h2>
-            
-            
-            <form class='f1' action="php/loginBusiness.php" method="post">
-                <fieldset>
-                <legend><h3>Let's get you signed in.</h3></legend>
-                    
-                    <input id='other' class='textbox' type="text" name="email" placeholder='Your Email ID' ><br>
-                    <input id='other' class='textbox' type="password" name="pass" placeholder='Password' ><br>
-                    <input  type="checkbox" name="remember" value="remember_me"> Remember me &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
-                    <a id="forgot" href="#" >Forgot password?</a>
-                    <br>
-                    
-                    <button id='create' type="submit"  >Login</button><br/>
-                    
-                </fieldset>
-                
-                
-                
-                
-            </form>
-            <form class='forgot_pass' action="#" method="post">
-                <h3>Enter your email or username below and we will<br> send you a link to reset your password</h3>
-                <input id='other' class='textbox' type="text" name="email" placeholder='Your Email ID' ><br>
-                <button id='create' type="submit" >Send Password Reset Instructions</button>
-                
-            </form>
-        </div>
-    </body>
+
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Business Login</title>
+		 
+		<link href="css/bootstrap.min.css" rel="stylesheet"> 
+		<link href="css/businessLogin.css" rel="stylesheet"> 
+		
+		
+	</head>
+	
+	<body>
+	
+		<div class="container">
+			<div class="row img_row">
+				<br><a class="navbar-brand" href="index.html"><img src="images/full_logo_light2.png" height="44.6" width="192.26" class="img-responsive" /></a>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<h2 style="font-family:pt_sans;"><b>Business</b></h2>
+			</div>
+
+			<div class="row">
+				<h3 style="font-family:pt_sans;"><b>Welcome Back</b></h3>
+			</div>
+			
+			
+			<div class="row">
+				
+				<div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 blank" ></div>
+				
+				<div class="col-lg-8 col-sm-8 col-md-8 col-xs-8 border">
+					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+						<fieldset>
+								<legend><h4 style="font-family:home; color:black;"><br>Lets get you signed in</h4></legend>
+								<div class="form-group">
+									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+								</div>
+								<div class="form-group">
+									<div class="i1" style="font-family:home; text-align:left;"><input type="checkBox" class="i1">Remember Me
+										<a href="#" onClick="show()" class="i1" style="float:right; font-family:home;">Forgot Password?</a>
+									</div>
+									
+								</div>
+								<div class="from-group">
+									<button class="btn btn-default" style="font-family:home;" >Login</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+				</div>
+				
+				<div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 blank"></div>
+				
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 blank" ></div>
+				
+				<div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 form">
+					<form class="form-horizontal" id="forgot_pass">
+						<h4 style="font-family:home;">Enter your email or username below and we will<br> send you a link to reset your password</h4>
+						<div class="form-group">
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+						</div>
+						<div class="from-group">
+							<button id="btn" style="font-family:home;" class="btn btn-default">Send Password Reset Instructions</button>
+						</div>
+					</form>
+				</div>
+				
+				<div class="col-lg-3 col-sm-3 col-md-3 col-xs-3 blank"></div>
+				
+			</div>
+			
+		</div>
+    
+	</body>
+	
+	<script>
+		document.getElementById('forgot_pass').style.visibility= "hidden";
+		function show(){
+			document.getElementById('forgot_pass').style.visibility= "visible";
+		}
+	</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
 </html>

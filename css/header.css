@@ -7,7 +7,7 @@
     width: 100%;
     height: 44.6px;
     z-index: 100;
-
+	
     box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.6);
     background: #002542; /* Old browsers */
     background: -moz-linear-gradient(left,  #002542 0%, #1d3e55 100%); /* FF3.6+ */
@@ -52,11 +52,11 @@
     margin: 0;
     width: 100%;
     padding: 0;
-    height : 100%;
+    height: 50px;
     display: block;
 
 /*    UI */
-    font-family: 'Neoteric', sans-serif;
+    font-family: neoteric, sans-serif;
 }
 
 /* Positioning */
@@ -74,29 +74,16 @@
 .nav-bar ul li
 {
     float: right;
-    
-    
     padding: 18px 10px;
-    
     margin: 0 10px;
-    
     height: 0px;
-   
     transition: height 0.2s;
-    
 }
 
-
-
-
 .nav-bar ul li:hover
-
 {
-    
-    
-    height: 12px;
-    background: #ffffff;
-    
+    height: 50px;
+    background: #ffffff;   
 }
 
 
@@ -265,6 +252,68 @@
     transition: 0.7s;
 ]
 
+.icon-bar{
+	background:#FFFFFF;
+}
 
+/*mine*/
+
+.nav{
+	font-family:neoteric, sans-serif;
+}
+
+.nav:hover{
+	color:rgb(0,0,0);
+}
+
+ ul li:hover
+{
+    height: 50px;
+    background: #ffffff;   
+	color:black;
+}
+
+.navbar a
+{
+/*    font-family: Champ;*/
+
+    text-decoration: none;
+    color:white;
+    transition: 0.4s;
+}
+
+.navbar ul li:hover a
+{
+    color: #000000; /*login and sign up k andar wala business writer*/
+    opacity: 1;
+}
+
+.navbar ul li:hover ul
+{
+    display: block;
+    transform: rotateX(0deg);
+    height: auto;
+	color:black;
+}
+
+.navbar ul li:hover ul li
+{
+    height: 35;
+    color:#FFFFFF;
+    background: transparent;
+    
+}
+
+.navbar ul li ul li a:hover
+{
+    color: #2eb161;
+/*    color: #626262;*/
+}
+
+.navbar ul li img
+{
+    height: 100%;
+    color:black;
+}
 
 
