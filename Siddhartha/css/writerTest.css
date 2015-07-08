@@ -1,0 +1,93 @@
+.intro
+{
+    position: absolute;
+    width: 86%;
+    top: 60px;
+    left: 7%;
+    font-family: nesia;    
+    
+    
+}
+
+.intro h1
+{
+    font-size: 27px;
+    color: #2eb161;    
+}
+
+.intro h2
+{
+    float: right;
+    margin-right: 30px;
+    color: #2eb161;    
+}
+
+.intro h3
+{
+    color: #2eb161;    
+}
+.intro a img
+{
+    position: absolute;
+    height: 50px;
+    top: -40px;
+    left: 0px;
+}
+
+#startButton
+{
+    font-family: Champ;
+    font-size: 17px;
+    width: 120px;
+    height: 30px;
+    background: #2eb161;
+    color: #fff;
+    border-color: #2eb161;
+    border-width: 1px;
+    transition: 0.2s;
+}
+
+#startButton:hover
+{
+    
+    border-width: 4px;
+    border-color: #2eb161;
+    
+}
+
+.testForm
+{
+    position: absolute;
+    width: 86%;
+    top: 350px;
+    left: 7%;
+   
+    font-family: nesia;    
+    
+  
+}
+
+#ansSub
+{
+    font-family: Champ;
+    font-size: 17px;
+    width: 120px;
+    height: 30px;
+    background: #2eb161;
+    color: #fff;
+    border-color: #2eb161;
+    border-width: 1px;
+    transition: 0.2s;   
+}
+
+#ansSub:hover
+{
+    border-width: 4px;
+    border-color: #2eb161;
+    
+}
+
+#areaChoosen
+{
+    margin-top: 10px;
+}
