@@ -1,0 +1,101 @@
+#land_back
+{
+    position: fixed;
+    top: -180px;
+    left: 0%;
+    width: 1400px;
+    -webkit-filter:blur(3px);
+}
+
+#logo_wp
+{
+    position: absolute;
+    top: 30px;
+    width: 30%;
+    left:35%;
+    
+    
+}
+
+.sectors
+{
+    position: absolute;
+    top:160px;
+    left: 0%;
+    height: 300px;
+    
+    width: 100%;
+}
+
+.sectors div
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 50%;
+    color: #fff;
+    font-family: PT sans, sans-serif;
+    
+}
+
+.sectors div a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+.sectors .sec_c1
+{
+    text-align: right;
+}
+
+.sectors .sec_c2
+{
+    left: 50%;
+    width: 49%;
+    border-left-style: ridge;
+    border-left-width: 1.5px;
+    border-left-color: #ffc600;
+}
+
+
+
+#backgrd1
+{
+    background: orange;
+    margin-left: 80%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    margin-top: -42px;
+    -webkit-transition: margin-left 0.5s;
+}
+
+
+.sectors .sec_c1 #land_signup1:hover #backgrd1
+{
+    margin-left: 100%;
+}
+
+
+#backgrd2
+{
+    background: orange;
+    margin-right: 80%;
+    padding-top: 2%;
+    padding-bottom: 3.1%;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-top: -42px;
+    -webkit-transition: margin-right 0.5s;
+}
+
+
+.sectors .sec_c2 #land_signup2:hover #backgrd2
+{
+    margin-right: 100%;
+}
+
+
