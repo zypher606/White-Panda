@@ -1,0 +1,966 @@
+
+/*FOnt import*/
+
+
+/*-----------*/
+
+
+.anchors
+{
+    position: absolute;
+    top: -5%;
+    left: 0%;
+}
+/*Background Image*/
+#back_img1
+{
+    position: fixed;
+    top: -67px;
+    left: 0%;
+    
+    width: 1400px;
+/*    z-index: -51;*/
+}
+
+#back_img2
+{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 1400px;
+
+    display: none;
+    z-index: -51;
+}
+
+
+/*Introduction Page*/
+.intro_page
+{
+    position: absolute;
+    height: 700px;
+    width: 100%;
+    top: 0;
+    left: 0%;
+    text-align: center;
+    overflow: hidden;
+}
+.intro_page div
+{
+    
+    position: absolute;
+    top: 62%;
+    height: 8%;
+    width: 24%;
+    font-size:180%;
+    padding: 1% 1.2% 0 0;
+    border-radius:8px;
+/*    border-radius:40px;*/
+}
+
+.intro_page a
+{
+    text-decoration: none;
+}
+.intro_page div p 
+{
+    font-family: "PT Sans";
+    color: #fff;
+    font-size: 2em;
+    
+}
+
+
+.intro_page #slogan
+{
+    top:20%;
+    width: 100%;
+}
+
+.intro_page #slogan p
+{
+    font-family: nesia;
+    color: #fff;
+    font-weight: bold;
+}
+
+.intro_page #start
+{
+    color: white;
+    background-color: rgba(0, 32, 58, 1); /*  #00203a */
+    left:21%;
+    transition: 0.6s;
+    font-family: Champ;
+}
+
+.intro_page #start:hover
+{
+    color: black;
+    background-color: rgba(0, 32, 58, 0.4);
+}
+
+.intro_page #start:hover>#opaque
+{
+    opacity:0;
+}
+
+.intro_page #order
+{
+    color: white;
+/*    background-color: rgba(150, 79, 76, 1); */
+    background-color: #2eb161;
+    left: 55%;
+    transition: 0.6s;
+    font-family: Champ;
+}
+
+.intro_page #order:hover
+{
+    color: black;
+    background-color: rgba(46, 117, 97, 0.4);  
+}
+
+.intro_page #order:hover>#opaque
+{
+    opacity:0;
+    
+}
+.intro_page div img
+{
+    
+    position: absolute;
+    right: 5%;
+    top: 24%;
+    height: 50%;
+    transition: 0.6s;
+}
+
+
+/*
+@keyframes bounce {
+  from {
+    margin-top: 580px;
+      
+  }
+
+  to {
+    margin-top: 610px;
+    
+  }
+}
+
+*/
+@keyframes bounce {
+  0% { margin-top: 570px;}
+
+  10% {margin-top: 600px;}
+  90% {margin-top: 600px;}
+  100% {margin-top: 570px;}
+}
+
+@-webkit-keyframes bounce {
+  0% { margin-top: 570px;}
+
+  10% {margin-top: 600px;}
+  90% {margin-top: 600px;}
+  100% {margin-top: 570px;}
+}
+
+#bounce
+{
+    margin-top:576px;
+    z-index: 100;
+    width: 45px;
+    opacity: 0.7;
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-name: bounce;
+/*    animation-timing-function: linear*/
+    -webkit-animation-name: bounce;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    
+}
+
+
+/* How it works */
+
+.how_it_works
+{
+    position: absolute;
+    top: 640px;
+    left: 0%;
+    height: 740px;
+    width: 100%;
+    background-color: #ffffff;
+/*    background-color: rgba(150, 79, 76, 1);  */
+/*    background: rgba(255, 255, 255, 0.5);*/
+    overflow: hidden;
+
+}
+
+.how_it_works #head p
+{
+    font-size: 250%;
+    width: 40%;
+    margin: auto;
+    margin-top: 33px;
+    text-align: center;
+    color: #2eb161;
+    font-family: nesia;
+    font-weight: bold;
+    transition: 0.6s;
+    
+}
+
+
+.how_it_works #process
+{
+    position: absolute;
+    top: 12%;
+    width: 100%;
+    height: 70%;
+    border-top: solid;
+    border-width: 1px;
+    border-color: #2eb161;
+    
+}
+.how_it_works #process div
+{
+/*    position: absolute;*/
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    text-align: center;
+/*    background: rgba(220, 220, 220, 1);*/
+/*    box-shadow: */
+/*        inset 0 11px 60px -10px rgba(0,0,0,1),*/
+/*        inset 0 -11px 60px -10px rgba(255,255,255,1);*/
+/*    transition: 0.6s;*/
+}
+
+#guidelines
+{
+    background: -webkit-linear-gradient(top, white , #e7dfff);
+    background: -o-linear-gradient(top, white , #e7dfff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, white , #e7dfff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, white , #e7dfff); /* Standard syntax */
+}
+
+#claim
+{
+    background: -webkit-linear-gradient(top, white , #ded3fd);
+    background: -o-linear-gradient(top, white , #ded3fd); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, white , #ded3fd); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, white , #ded3fd); /* Standard syntax */
+}
+
+
+#content
+{
+    background: -webkit-linear-gradient(top, white , #d3c5ff);
+    background: -o-linear-gradient(top, white , #d3c5ff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, white , #d3c5ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, white , #d3c5ff); /* Standard syntax */
+}
+
+
+.how_it_works #process div p
+{
+    width: 70%;
+    margin: auto;
+    margin-top: 10%;
+    font-size: 150%;
+    transition: 0.6s;
+    color: black;
+    font-family: Champ;
+    
+}
+.how_it_works #process div img
+{
+    height: 176px;
+    width: 176px;
+    margin: auto;
+    margin-top: 25%;
+    opacity: 1;
+    transition: 0.6s;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------*/
+/* Hover effects */
+/*
+.how_it_works #process div:hover
+{
+    background: rgba(255, 255, 255, 1);
+}
+.how_it_works #process div:hover>p
+
+{
+
+/*        color: #f16326;*//*
+        color: #2eb161;
+}
+
+.how_it_works #process div:hover>img
+{
+    opacity: 0.8;
+}
+*/
+/*-----------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+.how_it_works #sectors
+{
+    position: absolute;
+    top: 83%;
+    height:17%;
+    width: 100%;
+    background: white;
+    
+    
+    
+}
+.how_it_works #sectors div
+{
+    float: left;
+    height: 100%;
+    width: 14%;
+    text-align: center;
+    
+}
+.how_it_works #sectors div img
+{
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    margin-top: 17px;
+    
+    transition: 0.6s;
+}
+.how_it_works #sectors div p
+{
+    width: 80%;
+    bottom: 0;
+    margin: auto;
+    margin-top: 12px;
+    text-align: center;
+    color: black;
+    font-family: Champ;
+    font-weight: 800    ;
+    
+}
+
+/* Hover Effects */
+/*
+.how_it_works #sectors div:hover>p
+{
+    color: rgba(150, 79, 76, 1);  
+    color: rgba(145, 217, 254, 1);  
+    opacity: 1;
+}
+.how_it_works #sectors div:hover>img
+{
+    background-color: rgba(150, 79, 76, 1); 
+    background-color: #2eb161; 
+    background-color: rgba(145, 217, 254, 1);  
+    opacity: 1;
+}
+*/
+/*---------------*/
+
+
+
+
+
+.business_need
+{
+    position: absolute;
+    top:1390px;
+    height: 500px;
+    width: 100%;
+    left: 0%;
+    color: white;
+    overflow: hidden;
+    
+}
+
+
+.business_need #head
+{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+.business_need #head p
+{
+    font-size: 250%;
+    width: 80%;
+    margin: auto;
+    margin-top: 33px;
+    text-align: center;
+    font-family: nesia;    
+}
+.business_need .components
+{
+    width: 360px;
+    height: 330px;
+    float: left;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 120px;
+    
+    border: solid;
+    border-radius: 600px;
+    border-width: 3px;
+   
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+.business_need .components img
+{
+    width: 90px;
+}
+
+
+.business_need .components #name
+{
+    font-size: 20px;
+    font-family: Champ;
+}
+
+.business_need .components #details
+{
+    font-size: 17px;
+    
+    font-family: Champ;
+}
+
+.business_need .components #quote
+{
+    font-size: 17px;
+    
+    font-family: Champ;
+    
+}
+
+.business_need .components #quote img
+{
+    width: 30px;
+}
+
+
+
+
+
+
+/*merquee-----------------------*/
+.merquee
+{
+    position: absolute;
+    left: 0;
+    
+    top:1970px;
+    background-color: #fff;
+    width: 100%;
+    height: 140px;
+    
+    color: white;
+    overflow: hidden;
+    
+}
+
+.merquee img
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    top: 0%;
+    
+}
+
+
+
+@keyframes mer1
+{
+    0%   {left: 0;}
+    25%  {left: -100%;opacity: 1;}
+    25.1% {opacity: 0;}
+    
+    
+    75%  {left: 100%; opacity: 0;}
+    75.1%  {left: 100%; opacity: 1;}
+    100%  {left: 0;}
+    
+}
+
+@-webkit-keyframes mer1
+{
+    0%   {left: 0;}
+    25%  {left: -100%;opacity: 1;}
+    25.1% {opacity: 0;}
+    
+    
+    75%  {left: 100%; opacity: 0;}
+    75.1%  {left: 100%; opacity: 1;}
+    100%  {left: 0;}
+    
+}
+
+@keyframes mer2
+{
+    0%   {left: 100%; opacity: 1;}
+    25%  {left: 0; }
+    50%  {left: -100%;opacity: 1;}
+    50.1%  {opacity: 0;}
+    75%  {left: 0;}
+    100%  {left:  100%;opacity: 0;}
+    
+    
+    
+}
+
+@-webkit-keyframes mer2
+{
+    0%   {left: 100%; opacity: 1;}
+    25%  {left: 0; }
+    50%  {left: -100%;opacity: 1;}
+    50.1%  {opacity: 0;}
+    75%  {left: 0;}
+    100%  {left:  100%;opacity: 0;}
+    
+    
+    
+}
+
+@keyframes mer3
+{
+    0%   {left: 0%; opacity: 0;}
+    25%  {left: 100%; opacity: 0; }
+    25.1%  {left: 100%; opacity: 1; }
+    50%  {left: 0%;opacity: 1;}
+    
+    75%  {left: -100%; opacity: 1;}
+    75.1%  {left: -100%; opacity: 0;}
+    100%  {left: 0%;opacity: 0;}
+    
+    
+    
+}
+
+@-webkit-keyframes mer3
+{
+    0%   {left: 0%; opacity: 0;}
+    25%  {left: 100%; opacity: 0; }
+    25.1%  {left: 100%; opacity: 1; }
+    50%  {left: 0%;opacity: 1;}
+    
+    75%  {left: -100%; opacity: 1;}
+    75.1%  {left: -100%; opacity: 0;}
+    100%  {left: 0%;opacity: 0;}
+    
+    
+    
+}
+
+@keyframes mer4
+{
+    0%   {left: -100%; opacity: 0;}
+    25%  {left: 0%; opacity: 0; }
+    
+    50%  {left: 100%;opacity: 0;}
+    50.1%  {left: 100%;opacity: 1;}
+    
+    75%  {left: 0%; opacity: 1;}
+    
+    100%  {left: -100%;opacity: 1;}
+    
+    
+    
+}
+
+@-webkit-keyframes mer4
+{
+    0%   {left: -100%; opacity: 0;}
+    25%  {left: 0%; opacity: 0; }
+    
+    50%  {left: 100%;opacity: 0;}
+    50.1%  {left: 100%;opacity: 1;}
+    
+    75%  {left: 0%; opacity: 1;}
+    
+    100%  {left: -100%;opacity: 1;}
+    
+    
+    
+}
+
+.merquee #im1
+{
+    
+    animation-duration: 58s;
+    -webkit-animation-duration: 58s;
+    
+    animation-name: mer1;
+    -webkit-animation-name: mer1;
+    
+    z-index: 11;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+.merquee #im2
+{
+    left: 100%;
+    animation-duration: 58s;
+    -webkit-animation-duration: 58s;
+    
+    animation-name: mer2;
+    -webkit-animation-name: mer2;
+    
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+
+.merquee #im3
+{
+    left: 0;
+    animation-duration: 58s;
+    -webkit-animation-duration: 58s;
+    animation-name: mer3;
+    -webkit-animation-name: mer3;
+    z-index: 11;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+
+.merquee #im4
+{
+    left: -100%;
+    animation-duration: 58s;
+    -webkit-animation-duration: 58s;
+    animation-name: mer4;
+    -webkit-animation-name: mer4;
+    z-index: 11;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+}
+
+
+
+
+
+
+
+
+
+
+/*3rd page----------------*/
+.best_wr
+{
+    position: absolute;
+    left: 0%;
+    top:1380px;
+/*    top:2110px;*/
+    height: 500px;
+    width: 100%;
+
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#backgrnd2
+{
+    position: absolute;
+    z-index: -4;
+    left: 0;
+    width: 100%;
+    -webkit-filter:blur(1px);
+}
+
+
+.best_wr h1
+{
+
+    font-family: Champ;
+}
+.best_wr div
+{
+    
+    position: absolute;
+    top: 20%;
+    
+    height: 45%;
+    width: 14.5%;
+    transition: 0.5s;
+    font-family: nesia;
+    /*SEPARATION 0.6% */
+    
+}
+
+.best_wr .line2
+{
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    top:37%;
+}
+
+.best_wr .line2 div img
+{
+    height: 90px;;
+}
+#business
+{
+    left: 5%;
+}
+
+#art_des
+{
+    left: 20.1%;
+}
+
+#food_bev
+{
+    left: 35.2%;
+}
+
+#entertain
+{
+    left: 50.3%;
+}
+
+#healthcare
+{
+    left: 65.4%;
+}
+
+#view_all_ind
+{
+    left: 80.5%;
+}
+
+.best_wr div p
+{
+    
+    text-align: center;
+    top: 80%;
+    
+}
+
+.best_wr div img
+{
+    padding-top: 23%;
+    height: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*page4-THINK WHAT IT TAKES----*/
+.think_wht
+{
+    position: absolute;
+    top: 1870px;
+/*    top: 2610px;*/
+    left: 0%;
+    height: 680px;
+    width: 100%;
+    background: white;
+    text-align: center;
+    font-family: nesia;
+    overflow: hidden;
+
+}
+
+.think_wht a
+{
+    text-decoration: none;
+}
+.think_wht div
+{
+    
+    font-family: Champ;
+    text-align: center;
+    width: 20%;
+    position: absolute;
+    font-size: 20px;
+    background: #f6f3fe;
+  
+    padding: 8px 8px 2px 8px;
+}
+
+
+.think_wht div img
+{
+/*    position: absolute;*/
+    height:138px;
+/*    height: 20%;*/
+}
+
+.think_wht #r11
+{
+    top:20%;
+    left: 25%;
+}
+
+.think_wht #r12
+{
+    top:20%;
+    right: 25%;
+}
+
+.think_wht #r21
+{
+    top:53%;
+    left: 25%;
+}
+
+.think_wht #r22
+{
+    top:53%;
+    right: 25%;
+}
+
+
+.think_wht ul li p
+{
+    position: absolute;
+    left: 50%;
+}
+
+.think_wht h2
+{
+    border: solid;
+    margin-top: 38%;
+    margin-left: 40%;
+    margin-right: 40%;
+    background-color: #2eb161;
+    border-color: #2eb161;
+    transition: 0.5s;
+    border-radius: 20px;
+    border-width: 2px;
+    color: #ffffff;
+    font-family: Champ;
+    
+    
+}
+
+.think_wht h2:hover
+{
+    transition: 0.5s;
+    color: #2eb161;
+/*    color: #002542;*/
+    background-color: transparent;
+}
+
+#strtWrit
+{
+    margin-top: 530px;
+}
+
+
+
+
+/*Last casting----------*/
+
+.last_pg
+{
+    position: absolute;
+    top: 2550px;
+/*    top: 3290px;*/
+    left: 0%;
+    height: 250px;
+    width: 100%;
+    background: white;
+    text-align: center;
+    
+    
+}
+
+.last_pg div
+{
+    
+    width: 100%;
+    top: 20%;
+    
+    height: 43%;
+    
+}
+
+.last_pg h3 img
+{
+    height: 53px;
+    
+    
+}
+.last_pg h3
+{
+    font-size: 17px;
+    margin-top: 80px;
+    font-family: Champ;
+}
+.last_pg p img
+{
+    height: 28px;
+    padding-right: 0.4%;
+}
+
+
+
+
+
+
+
