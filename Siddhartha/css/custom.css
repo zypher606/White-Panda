@@ -1,0 +1,22 @@
+/*custom css*/
+html {
+	background: url(img/home-back.jpg) no-repeat center center fixe;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.container-custom {
+	margin-right: auto;
+  	margin-left: auto;
+  	margin-top: 20px;
+}
+
+.custom-img {
+
+	height: auto;
+	width: 200em;
+	max-width: 100%;
+	display:block;
+}
