@@ -1,0 +1,128 @@
+<html>
+
+	<head>
+			
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Contact Us</title>
+		 
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/contactus.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script>
+			function initialize() {
+				var mapProp = {
+					center:new google.maps.LatLng(23.106921100000000000,72.595258300000070000),
+							zoom:18,
+							mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		<script src="js/bootstrap.min.js"></script>
+			
+	</head>
+	
+	<body>
+	
+		<div class="container">
+			<div class="img_row">
+				<br><a class="navbar-brand" href="index.html"><img src="images/full_logo_light2.png" height="44.6" width="192.26" class="img-responsive" /></a>
+			</div>
+		</div>
+		
+		<div style="height:20px; background:white;"></div>
+		
+		<div class="query-row">
+			<div class="container center-block">
+				Got a Question or Inquiry?
+			</div>
+		</div>
+		
+		<div class="map-area">
+			<div id="googleMap" style="width:100%;height:500px;"></div>
+		</div>
+		
+		<div class="form-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+					
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						<div class="row">
+							<div class="col-lg-7 col-md-7 col-sm-7 col-sm-7">
+							
+								<form class="form-horizontal" action="mailto:roshan.agarwal@iitgn.ac.in" >
+								
+									<h3>CONTACT FORM</h3>
+									<h5>Feeling curious to know something about? May be, drop us a message.<br></h5>
+									
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Name*">
+									</div>
+									<div class="form-group">
+										<input class="form-control" type="email" placeholder="Email Address*">
+									</div>
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Phone Number (optional)">
+									</div>
+									<div class="form-group">
+										<textarea class="form-control" type="text" placeholder="Message*" rows="5"></textarea>
+									</div>
+									<button class="btn btn-default send-message">SEND MESSAGE</button>
+									
+								</form>
+							
+							</div>
+							
+							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+							
+							<div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
+								<div class="row side-info">
+								
+									<h3>CONTACT INFO</h3>
+									<h5>You can also use the information provided below to contact us.<br></h5>
+									
+									<label>email:</label>&nbsp;roshan.agarwal@iitgn.ac.in<br><br>
+									<h4>ENQIURE ABOUT BUSINESS:</h4>
+									<label>phone:</label>&nbsp;+91 76009 53553<br><br>
+									<h4>ENQIURE ABOUT WRITERSHIP:</h4>
+									<label>phone:</label>&nbsp;+91 76009 53553<br><br>
+									IIT Gandhinagar, Chandkheda, <br>
+									Ahmedabad, 382424<br>
+									Gujrat, India.
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="writer-business">
+			<div class="container question">
+				<div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					Want to start a business with us or become a writer?
+					<button class="btn btn-default click-here"><b>CLICK HERE</b></button>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+			</div>
+		</div>
+		
+		<footer class="bottom-footer">
+			<a href="privacy.html">Privacy</a>&nbsp; | &nbsp;
+			<a href="privacy.html">Terms of Use</a>&nbsp; | &nbsp;
+			<a href="privacy.html">Writer's Agreement</a>
+		</footer>
+	</body>
+
+</html>
