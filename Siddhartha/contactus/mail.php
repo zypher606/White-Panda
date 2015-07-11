@@ -5,7 +5,7 @@
 	$subject = $_POST['subject'];
 	$message = $_POST['message'];
 	
-	$email = "sidc.117@gmail.com"
+	$email = "roshan.agarwal@iitgn.ac.in"
 	
 	if( $name=="" && $from=="" && $subject=="" && $message=="" ){
 		
