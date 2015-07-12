@@ -2,9 +2,17 @@
 (function() {
   var app = angular.module('gemStore', ['store-directives']);
    
- 
 
-  app.controller('StoreController',function($scope) {
+  
+
+  app.controller('StoreController',function($scope, $http) {
+
+  //getwriters(); // Load all available writers 
+  function getWriters(){  
+  $http.post("ajax/getWriters.php").success(function(data){
+        $scope.tasks = data;
+       });
+  };
    
 
 
