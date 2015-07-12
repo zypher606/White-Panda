@@ -1,19 +1,23 @@
-<?php 
-require_once 'db_conn.php'; // The mysql database connection script
-$status = '%';
-if(isset($_GET['status'])){
-$status = $_GET['status'];
-}
-$query="select ID, TASK, STATUS from tasks where status like '$status' order by status,id desc";
-$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
 
-$arr = array();
-if($result->num_rows > 0) {
-	while($row = $result->fetch_assoc()) {
-		$arr[] = $row;	
-	}
-}
+$conn = new mysqli("myServer", "root", "", "db_name");
 
-# JSON-encode the response
-echo $json_response = json_encode($arr);
+$result = $conn->query("SELECT Name, Email, Area, Sample  FROM Customers");
+
+$outp = "";
+while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+    if ($outp != "") {$outp .= ",";}
+    $outp .= '{"Name":"'  . $rs["Name"] . '",';
+    $outp .= '"Email":"'   . $rs["Email"]        . '",';
+    $outp .= '"Area":"'   . $rs["Area"]        . '",';
+    $outp .= '"Sample":"'. $rs["Sample"]     . '"}'; 
+}
+$outp ='{"records":['.$outp.']}';
+$conn->close();
+
+echo($outp);
 ?>
+
+<!-- output similar to http://www.w3schools.com/angular/customers_mysql.php  -->

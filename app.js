@@ -7,11 +7,10 @@
 
   app.controller('StoreController',function($scope, $http) {
 
-  //getwriters(); // Load all available writers 
+  //getwriters(); // Load all available writers not used currently
   function getWriters(){  
-  $http.post("ajax/getWriters.php").success(function(data){
-        $scope.tasks = data;
-       });
+   $http.get("ajax/getWriters.php")
+    .success(function (response) {$scope.writers = response.records;});
   };
    
 
