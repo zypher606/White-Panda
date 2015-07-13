@@ -15,6 +15,7 @@
 src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
    
     <script type="text/javascript" src="angular.min.js"></script>
+          <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="assign_app.js"></script>
    <script type="text/javascript" src="writers.js"></script>
       
@@ -29,7 +30,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
         });
      </script>
 
-  <body ng-controller="StoreController as store">
+  <body ng-controller="Store_Controller as stor">
     <!--  Store Header  -->
     <header>
       <h1 class="text-center">Welcome Editors!</h1>
@@ -41,7 +42,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-addon"><i class="fa fa-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i></div>
-        
+
         <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
       </div>      
     </div>
@@ -61,46 +62,23 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
     </tr>
   </thead>
   <tbody>
-    <tr  ng-repeat="writer in store.writers | filter:searchWriter">
+    <!--     <tr  ng-repeat="writer in store.writers |  filter: { area: 'sports' }">
+ -->
+    <tr  ng-repeat="order in stor.orders |  filter: searchWriter">
      
-      <td>{{writer.area}} </td>
-      <td>{{writer.budget}}</td>
-       <td>{{ writer.job_description | limitTo: 25 }}{{myString.length > 25 ? '...' : ''}}...
+      <td>{{order.area}} </td>
+      <td>{{order.budget}}</td>
+       <td>{{ order.job_description | limitTo: 25 }}{{myString.length > 25 ? '...' : ''}}...
 
-<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="popover" title="Job Description"data-content="{{ writer.job_description }}">More</button>
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="popover" title="Job Description"data-content="{{ order.job_description }}">More</button>
 </td>
 
       <td>           
           <div class="row header">
            <button class="btn btn-success" type="button"  data-toggle="modal" 
- data-target="#PostCommentsModal{{$index}}"> Assign Writers</button>
+ data-target="#filteredwriters"> Assign Writers</button>
           
-         <div class="modal fade" id="PostCommentsModal{{$index}}" tabindex="-1" 
-role="dialog" aria-labelledby="helpModalLabel"     aria-hidden="true">
-            <div class="modal-dialog">      
-         <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" 
-                        data-dismiss="modal">
-                            <span aria-hidden="true">&times;
-                            </span><span class="sr-only">
-                            Close</span></button>
-                          <h4 class="modal-title" >
-                            Editor Options</h4>
-                       
-                     </div>
-             <div class="modal-body">
-
-                         <writer-tabs></writer-tabs>
-      
-         
         
-       
-               </div>
-                   
-                </div>
-            </div>
-        </div>
            </div>
            
 
@@ -118,6 +96,76 @@ role="dialog" aria-labelledby="helpModalLabel"     aria-hidden="true">
     </tr>
   </tbody>
 </table>
+
+ <div class="modal fade" id="filteredwriters" tabindex="-1" 
+           role="dialog" aria-labelledby="helpModalLabel"     aria-hidden="true">
+            <div class="modal-dialog">      
+         <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" 
+                        data-dismiss="modal">
+                            <span aria-hidden="true">&times;
+                            </span><span class="sr-only">
+                            Close</span></button>
+                          <h4 class="modal-title" >
+                           filtered writers</h4>
+                       
+                     </div>
+             <div class="modal-body">
+
+              <div ng-controller="StoreController as store">
+                     <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Area of expertise</th>
+        <th>Reviews</th>
+        <th>Assign</th>
+        <th>VIEW  uploaded Files <th>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr  ng-repeat="writer in store.writers | filter:{ area: 'sports' }">
+       
+        <td>{{writer.name}} </td>
+        <td>{{writer.email}}</td>
+         <td>{{writer.area}}</td>
+
+        <td>           
+  <div class="row header">
+    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="popover" title="REVIEWS" data-content="{{ writer.reviews }}">More</button>
+        
+            
+   
+  </div>
+             
+         </td>
+         <td>
+           
+         </td>
+         <td>
+           
+         </td>
+
+      </tr>
+    </tbody>
+  </table>
+              </div>
+
+                     
+      
+         
+        
+       
+               </div>
+                   
+                </div>
+            </div>
+        </div>
 
 
 

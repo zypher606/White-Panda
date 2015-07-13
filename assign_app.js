@@ -1,14 +1,14 @@
 
 (function() {
-  var app = angular.module('gem_Store', ['store-directives']);
+  var app = angular.module('gem_Store', ['store-directives', 'gemStore']);
    
  
 
-  app.controller('StoreController',function($scope) {
+  app.controller('Store_Controller',function($scope) {
    
 
 
-    this.writers = gems;
+    this.orders = gems;
   });
 
 
