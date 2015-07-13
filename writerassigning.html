@@ -114,7 +114,17 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
              <div class="modal-body">
 
               <div ng-controller="StoreController as store">
-                     <table class="table table-striped">
+
+         <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i></div>
+        
+        <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
+      </div>      
+    </div>
+  </form>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>Name</th>
@@ -129,7 +139,10 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
       </tr>
     </thead>
     <tbody>
-      <tr  ng-repeat="writer in store.writers | filter:{ area: 'sports' }">
+
+   
+
+      <tr  ng-repeat="writer in store.writers | filter:searchWriter ">
        
         <td>{{writer.name}} </td>
         <td>{{writer.email}}</td>
@@ -145,10 +158,10 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
              
          </td>
          <td>
-           
+           <input type="checkbox" value="">
          </td>
          <td>
-           
+           <button type="button" class="btn btn-danger btn-xs">View</button>
          </td>
 
       </tr>
