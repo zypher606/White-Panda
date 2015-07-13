@@ -6,7 +6,7 @@
     <script src="jquery.magnific-popup.js"></script>
 
     <link href="css/editorportal.css" rel="stylesheet">
-    <script src="popup.js"></script>
+  
    
           
 
@@ -23,6 +23,12 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 
   </head>
 
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+     </script>
+
   <body ng-controller="StoreController as store">
     <!--  Store Header  -->
     <header>
@@ -34,7 +40,8 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 <form>
     <div class="form-group">
       <div class="input-group">
-        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <div class="input-group-addon"><i class="fa fa-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i></div>
+        
         <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
       </div>      
     </div>
@@ -58,7 +65,10 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
      
       <td>{{writer.area}} </td>
       <td>{{writer.budget}}</td>
-       <td>{{writer.job_description}}</td>
+       <td>{{ writer.job_description | limitTo: 25 }}{{myString.length > 25 ? '...' : ''}}...
+
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="popover" title="Job Description"data-content="{{ writer.job_description }}">More</button>
+</td>
 
       <td>           
           <div class="row header">

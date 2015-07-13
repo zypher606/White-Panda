@@ -24,14 +24,16 @@
       </header>
    
 
-  <form>
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-addon"><i class="fa fa-search"></i></div>
-          <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
-        </div>      
-      </div>
-    </form>
+<form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i></div>
+        
+        <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
+      </div>      
+    </div>
+  </form>
+   
      
      
         <!--  product Container  -->
