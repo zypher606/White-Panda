@@ -1,48 +1,121 @@
-  <!DOCTYPE html>
-  <html ng-app="gemStore">
-    <head>
-    
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-      <link href="css/editorportal.css" rel="stylesheet">
-      <link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-      <script type="text/javascript" 
-  src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="angular.min.js"></script>
-      <script type="text/javascript" src="app.js"></script>
-     <script type="text/javascript" src="writers.js"></script>
-        
+<!DOCTYPE html>
+<html ng-app="gem_Store">
+  <head>
+    <link rel="stylesheet" href="magnific-popup.css"> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="jquery.magnific-popup.js"></script>
 
-
-
-    </head>
-
-    <body ng-controller="StoreController as store">
-      <!--  Store Header  -->
-      <header>
-          <h1 class="text-center">Welcome Editors !</h1>
-        <h2 class="text-center"> Choose and assign Writers </h2>
-      </header>
+    <link href="css/editorportal.css" rel="stylesheet">
+    <script src="popup.js"></script>
    
+          
 
-  <form>
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-addon"><i class="fa fa-search"></i></div>
-          <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
-        </div>      
-      </div>
-    </form>
-     
-     
+   <link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <script type="text/javascript" 
+src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="assign_app.js"></script>
+   <script type="text/javascript" src="writers.js"></script>
       
 
 
 
+  </head>
+
+  <body ng-controller="StoreController as store">
+    <!--  Store Header  -->
+    <header>
+      <h1 class="text-center">Welcome Editors!</h1>
+      <h2 class="text-center"> Assign  Writers </h2>
+    </header>
+ 
+
+<form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
+      </div>      
+    </div>
+  </form>
+   
+   
+      <!--  product Container  -->
+
+   <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Budget</th>
+      <th>Brief</th>
 
 
-      </div>
-    </body>
-  </html>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  ng-repeat="writer in store.writers | filter:searchWriter">
+     
+      <td>{{writer.area}} </td>
+      <td>{{writer.budget}}</td>
+       <td>{{writer.job_description}}</td>
+
+      <td>           
+          <div class="row header">
+           <button class="btn btn-success" type="button"  data-toggle="modal" 
+ data-target="#PostCommentsModal{{$index}}"> Assign Writers</button>
+          
+         <div class="modal fade" id="PostCommentsModal{{$index}}" tabindex="-1" 
+role="dialog" aria-labelledby="helpModalLabel"     aria-hidden="true">
+            <div class="modal-dialog">      
+         <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" 
+                        data-dismiss="modal">
+                            <span aria-hidden="true">&times;
+                            </span><span class="sr-only">
+                            Close</span></button>
+                          <h4 class="modal-title" >
+                            Editor Options</h4>
+                       
+                     </div>
+             <div class="modal-body">
+
+                         <writer-tabs></writer-tabs>
+      
+         
+        
+       
+               </div>
+                   
+                </div>
+            </div>
+        </div>
+           </div>
+           
+
+
+
+
+
+
+
+
+                   
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+    </div>
+  </body>
+</html>
 
 
 
