@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'icomoon';
+	/*font-family: 'icomoon';*/
 	src:url('../fonts/icomoon/icomoon.eot?pvm5gj');
 	src:url('../fonts/icomoon/icomoon.eot?#iefixpvm5gj') format('embedded-opentype'),
 		url('../fonts/icomoon/icomoon.woff?pvm5gj') format('woff'),
@@ -56,6 +56,16 @@
 	background: #2FB161;
 }
 
+.tabs nav li.tab-current:hover {
+	height:80px;
+	background: transparent;
+}
+
+.tabs nav li:hover {
+	height:80px;
+	background: transparent;
+}
+
 .tabs nav li.tab-current:after {
 	right: auto;
 	left: 100%;
@@ -72,7 +82,7 @@
 }
 
 .tabs nav a:hover {
-	color: #768e9d;
+	
 }
 
 .tabs nav li.tab-current a {
@@ -110,7 +120,7 @@
 }
 
 .icon-shop:before {
-	background-image:url("images/icons/Blog_post.png");
+	/*background-image:url("images/icons/Blog_post.png");*/
 }
 
 /* Content */
