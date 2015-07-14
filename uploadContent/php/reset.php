@@ -87,7 +87,8 @@ function mypasswordmatch()
                 </fieldset>
             </form>
 
-</div>;
+</div>
+</body>
 
 
 
