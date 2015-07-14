@@ -22,7 +22,7 @@ if(isset($_POST['action']))
                 $message = "Your password reset link send to your e-mail address.";
                 $to=$email;
                 $subject="Forget Password";
-                $from = 'info@whitepanda.in';
+                $from = 'notification@whitepanda.in';
                 $body='Hi, <br/> <br/>Your Membership ID is '.$Results['id'].' <br><br>Click here to reset your password http://www.whitepanda.in/php/reset.php?encrypt='.$encrypt.'&action=reset   <br/> <br/>--<br>whitepanda.in<br>Your Destination for Content Marketing.';
                 $headers = "From: " . strip_tags($from) . "\r\n";
                 $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
