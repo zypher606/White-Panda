@@ -53,6 +53,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 
   var gems = [
     {
+      isAssigned: true,
       name: 'Dummywriter1',
       email: "dummy@gmail.com",
       area: "sports",
@@ -73,6 +74,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
         author: "maxxeditor@example.org"
       }]
     }, {
+      isAssigned: false,
       name: 'Dummywriter2',
       email: "dummy2@gmail.com",
       area: 'cyber_security',
@@ -92,6 +94,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
         author: "editor2@example.org"
       }]
       }, {
+        isAssigned: false,
         name: 'Dummywriter3',
         email: "dummy3@gmail.com",
         area: 'sports',
@@ -116,6 +119,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
           author: "editor39@example.org"
         }]
     }, {
+        isAssigned: false,
         name: 'Dwriter3',
         email: "du3@gmail.com",
         area: 'sports',
@@ -140,6 +144,7 @@ app.controller('MyCtrl', ['$scope', function($scope) {
           author: "editor39@example.org"
         }]
     },{
+        isAssigned: false,
         name: 'Dummywriter5',
         email: "dummy3@gmail.com",
         area: 'medical',

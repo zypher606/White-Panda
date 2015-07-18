@@ -131,7 +131,6 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
         <th>Email</th>
         <th>Area of expertise</th>
         <th>Reviews</th>
-        <th>Assign</th>
         <th>VIEW  uploaded Files <th>
 
 
@@ -144,7 +143,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 
       <tr  ng-repeat="writer in store.writers | filter:searchWriter ">
        
-        <td>{{writer.name}} </td>
+        <td style="white-space:nowrap;"> <input type="checkbox" name="response" ng-model="writer.isAssigned" ng-value="true" ng-click="Update"/>--{{writer.name}} </td>
         <td>{{writer.email}}</td>
          <td>{{writer.area}}</td>
 
@@ -157,9 +156,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
   </div>
              
          </td>
-         <td>
-           <input type="checkbox" value="">
-         </td>
+        
          <td>
            <button type="button" class="btn btn-danger btn-xs">View</button>
          </td>
