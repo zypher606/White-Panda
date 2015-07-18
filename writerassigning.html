@@ -26,6 +26,17 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 
     <script>
         $(document).ready(function(){
+             // pop up .popover-test
+        $('.popover-test').popover();    
+        
+        // pop up #example1, #example2, #example3 with same content
+       $('[rel=popover]').popover({ 
+        html : true, 
+        content: function() {
+          return $('#popover_content_wrapper').html();
+        }
+    });
+
             $('[data-toggle="popover"]').popover();   
         });
      </script>
@@ -80,22 +91,15 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
           
         
            </div>
-           
-
-
-
-
-
-
-
-
-                   
 
       </td>
 
     </tr>
   </tbody>
 </table>
+
+            
+
 
  <div class="modal fade" id="filteredwriters" tabindex="-1" 
            role="dialog" aria-labelledby="helpModalLabel"     aria-hidden="true">
@@ -149,8 +153,18 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 
         <td>           
   <div class="row header">
-    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="popover" title="REVIEWS" data-content="{{ writer.reviews }}">More</button>
-        
+     &nbsp<button type="button" class="btn btn-default btn-xs dropdown-toggle" id="example1" rel="popover" data-original-title="Reviews">
+               Reviews</button>
+
+        <div id="popover_content_wrapper" style="display: none">
+          <li ng-repeat="review in writer.reviews">
+               
+                  <strong>{{review.levels}} level</strong>
+               
+                  <cite class="clearfix"> reviwed by {{review.author}} </cite>
+       
+              </li>
+        </div>
             
    
   </div>
