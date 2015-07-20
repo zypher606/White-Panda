@@ -9,6 +9,9 @@
             <li ng-class="{ active:tab.isSet(3) }">
               <a href ng-click="tab.setTab(3)">Reviews</a>
             </li>
+            <li ng-class="{ active:tab.isSet(4) }">
+              <a href ng-click="tab.setTab(4)">Assign Paygrade</a>
+            </li>
           </ul>
 
           <!--  Description Tab's Content  -->
@@ -20,5 +23,8 @@
 
           <!--  Review Tab's Content  -->
           <writer-reviews ng-show="tab.isSet(3)"></writer-reviews>
+
+          <!--  Review Tab's Content  -->
+           <writer-pay ng-show="tab.isSet(4)"></writer-pay>
 
 </section>

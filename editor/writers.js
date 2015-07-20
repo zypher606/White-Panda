@@ -53,6 +53,13 @@
     };
   });
 
+  app.directive("writerPay", function() {
+    return {
+      restrict: 'E',
+      templateUrl: "writer-pay.html"
+    };
+  });
+
   app.directive("writerSpecs", function() {
     return {
       restrict:"A",
