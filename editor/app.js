@@ -1,8 +1,8 @@
 
 (function() {
-  var app = angular.module('gemStore', ['store-directives']);
+  var app = angular.module('gemStore', ['store-directives','ngRoute']);
    
-   app.factory("services", ['$http', function($http) {
+  app.factory("services", ['$http', function($http) {
   var serviceBase = 'services/'
     var obj = {};
     obj.getwriters = function(){
@@ -34,18 +34,17 @@
     return obj;   
 }]);
   
-  
 
-  app.controller('StoreController',function($scope, $http) {
-  /*
+ app.controller('StoreController',function($scope, services) {
+  
   services.getwriters().then(function(data){
         $scope.writers = data.data;
     });
- */
+ 
  
 
     // the code at 44 line  below will be replaced by services code block
-    this.writers = gems;
+
   });
 
   app.directive('modalDialog', function() {

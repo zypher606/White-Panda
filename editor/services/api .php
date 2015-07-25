@@ -6,9 +6,9 @@
 		public $data = "";
 		
 		const DB_SERVER = "localhost";
-		const DB_USER = "roota";
-		const DB_PASSWORD = "";
-		const DB = "angularcode_write";
+		const DB_USER = "wpRootDatabase";
+		const DB_PASSWORD = "orthrox";
+		const DB = "whitepanda";
 
 		private $db = NULL;
 		private $mysqli = NULL;
@@ -64,7 +64,26 @@
 			if($this->get_request_method() != "GET"){
 				$this->response('',406);
 			}
-			$query="SELECT distinct c.id, c.name, c.email, c.area, c.pay, c.sample FROM angularcode_writers c order by c.id desc";
+                        $query="SELECT distinct c.ID, c.email, c.expertArea, c.sampleExpertAreaText, c.mobileNo, c.address, c.city, c.state, c.zipCode, c.payGrade FROM writerprofile  c order by c.ID desc";
+			$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
+
+			if($r->num_rows > 0){
+				$result = array();
+				while($row = $r->fetch_assoc()){
+					$result[] = $row;
+				}
+				$this->response($this->json($result), 200); // send user details
+			}
+			$this->response('',204);	// If no records "No Content" status
+			
+			echo 'new';
+		}
+		
+		private function writers_sample(){	
+			if($this->get_request_method() != "GET"){
+				$this->response('',406);
+			}
+			$query="SELECT distinct c.sampleExpertAreaText FROM writerprofile c order by c.ID desc";
 
 			$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
 
@@ -76,7 +95,12 @@
 				$this->response($this->json($result), 200); // send user details
 			}
 			$this->response('',204);	// If no records "No Content" status
+			
+			echo 'new';
 		}
+		
+		
+		
 		private function writer(){	
 			if($this->get_request_method() != "GET"){
 				$this->response('',406);
