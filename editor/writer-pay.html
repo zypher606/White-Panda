@@ -1,15 +1,44 @@
-   <h3>Assign PayGrade for {{writer.name}}</h3>
-   <p color = "blue">You have  assigned the writer following paygrade: {{writer.pay}}
+   <h3>Assign PayGrade for {{writer.email}}</h3>
+   <p color = "blue">You have  assigned the writer following paygrade: {{writer.payGrade}} with id {{writer.ID}}
          </p>
      </hr>
       Enter new PayGrade
-   
+          
   <div class="input-group">
   
-          	<span class="input-group-addon">$</span>
-                <input ng-model="writer.pay"  type="text" type="email" class="form-control" placeholder="1000 /-" title="Email" required />
+   <form   name="reviewForm" ng-controller="ReviewController">
+   
+       
+           
+   
+               <ul>
+                    <li class="err" ng-repeat="error in errors"> {{ error}} </li>
+                </ul>
+                <ul>
+                    <li class="info" ng-repeat="msg in msgs"> {{ msg}} </li>
+                </ul>
+               <fieldset class="form-group">
+              <select ng-model="writer.payGrade"  class="form-control  pull-right"    ng-options="stars for stars in ['novice (Rs 250)','journey_man (Rs 500)','veteran (Rs 1000)','expert (Rs 2000)']" title="levels" required >
+                  <option value="">Pay the writer</option>
+                </select>
+                </fieldset>
+                
+                <br>
+                 <button ng-click='updateWriter()'  class="btn btn-primary pull-right" value="Confirm" >Confirm
+                 </button>
+                     
+    </form>
+    
 
   
     </div>
-       &nbsp<input type="submit" class="btn btn-primary pull-right" value="Confirm" />
+      
+       
+        
+  
+ 
+     
+      
+      
+       
        
