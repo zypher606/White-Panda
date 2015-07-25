@@ -1,49 +1,6 @@
  (function() {
    var app = angular.module('store-directives', []);
    
-    app.factory("services", ['$http', function($http) {
-  var serviceBase = 'services/'
-    var obj = {};
-    obj.getwriters = function(){
-        console.log("in get writers");
-        return $http.get(serviceBase + 'writers');
-    }
-    
-    obj.getwriters_sample = function(){
-        console.log("in get writers sample");
-        return $http.get(serviceBase + 'writers_sample');
-    }
-    
-    obj.getwriter = function(writerID){
-        return $http.get(serviceBase + 'writer?id=' + writerID);
-    }
-
-    obj.insertwriter = function (writer) {
-    return $http.post(serviceBase + 'insertwriter', writer).then(function (results) {
-        return results;
-    });
-  };
-
-  obj.updateWriter = function (id,writer) {
-      return $http.post(serviceBase + 'updatewriter', {id:id, writer:writer}).then(function (status) {
-          return status.data;
-      });
-  };
-
-  obj.deletewriter = function (id) {
-      return $http.delete(serviceBase + '0?id=' + id).then(function (status) {
-          return status.data;
-      });
-  };
-
-    return obj;   
-}]);
-
-
-
-
-
-
 
   app.directive("writerTabs", function() {
     return {
@@ -86,7 +43,7 @@
     
        $scope.updateWriter = function(customer) {
         $location.path('/');
-         services.updateWriter(customerID, customer);
+         services.updatewriter(customerID, $scope.customer);
         
     };
     
