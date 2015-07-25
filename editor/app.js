@@ -1,14 +1,19 @@
-
 (function() {
-  var app = angular.module('gemStore', ['store-directives','ngRoute']);
-   
-  app.factory("services", ['$http', function($http) {
+  var app = angular.module('gemStore', ['store-directives']);
+  
+     app.factory("services", ['$http', function($http) {
   var serviceBase = 'services/'
     var obj = {};
     obj.getwriters = function(){
         console.log("in get writers");
         return $http.get(serviceBase + 'writers');
     }
+    
+    obj.getwriters_sample = function(){
+        console.log("in get writers sample");
+        return $http.get(serviceBase + 'writers_sample');
+    }
+    
     obj.getwriter = function(writerID){
         return $http.get(serviceBase + 'writer?id=' + writerID);
     }
@@ -19,7 +24,8 @@
     });
   };
 
-  obj.updatewriter = function (id,writer) {
+  obj.updateWriter = function (id,writer) {
+      console.log("in get app.js updating writer");
       return $http.post(serviceBase + 'updatewriter', {id:id, writer:writer}).then(function (status) {
           return status.data;
       });
@@ -33,41 +39,33 @@
 
     return obj;   
 }]);
+
+
+
+   
+
   
 
- app.controller('StoreController',function($scope, services) {
+  app.controller('StoreController',function($scope, $http, $rootScope, services) {
   
+
+
+                
+ 
+              
+            
   services.getwriters().then(function(data){
-        $scope.writers = data.data;
+        $rootScope.writers = data.data;
     });
- 
- 
 
-    // the code at 44 line  below will be replaced by services code block
 
+    // the code  below will be replaced by services code block
+
+
+  //  this.writers = gems;
   });
 
-  app.directive('modalDialog', function() {
-  return {
-    restrict: 'E',
-    scope: {
-      show: '='
-    },
-    replace: true, 
-    transclude: true, 
-    link: function(scope, element, attrs) {
-      scope.dialogStyle = {};
-      if (attrs.width)
-        scope.dialogStyle.width = attrs.width;
-      if (attrs.height)
-        scope.dialogStyle.height = attrs.height;
-      scope.hideModal = function() {
-        scope.show = false;
-      };
-    },
-    template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
-  };
-});
+
 
 app.controller('MyCtrl', ['$scope', function($scope) {
   $scope.modalShown = false;
@@ -212,4 +210,3 @@ app.controller('MyCtrl', ['$scope', function($scope) {
 
 
 })();
-
