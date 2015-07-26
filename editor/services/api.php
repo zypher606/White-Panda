@@ -151,7 +151,7 @@
 			$writer = json_decode(file_get_contents("php://input"),true);
 			
 			$id= (int)$writer['id'];
-			$paygrade=$writer['payGrade'];
+			$paygrade=(string)$writer['writer']['payGrade'];
 			/*
 			$column_names = array('expertArea', 'sampleExpertAreaText', 'mobileNo','address', 'city','state','zipCode','payGrade');
 			$keys = array_keys($writer['writer']);
@@ -166,10 +166,10 @@
 				$columns = $columns.$desired_key."='".$$desired_key."',";
 			}
 			*/
-			$query = "UPDATE writerprofile SET payGrade= '$payGrade' WHERE ID = $id ";
+			$query = "UPDATE writerprofile SET payGrade = '$paygrade' WHERE ID = $id ";
 			if(!empty($writer)){
 				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
-				$success = array('status' => "Success", "msg" => "writer ".$id." Updated Successfully.", "data" => $writer);
+				$success = array('status' => "Success", "msg" => "writer ".$id." Updated Successfully.", "paygrade" => $paygrade, "data" => $writer);
 				$this->response($this->json($success),200);
 			}else
 				$this->response('',204);	// "No Content" status

@@ -1,206 +1,212 @@
-<?php
-  require_once("Rest.inc.php");
+(function() {
+  var app = angular.module('gemStore', ['store-directives']);
   
-  class API extends REST {
+     app.factory("services", ['$http', function($http) {
+  var serviceBase = 'services/'
+    var obj = {};
+    obj.getwriters = function(){
+        console.log("in get writers");
+        return $http.get(serviceBase + 'writers');
+    }
+    
+    obj.getwriters_sample = function(){
+        console.log("in get writers sample");
+        return $http.get(serviceBase + 'writers_sample');
+    }
+    
+    obj.getwriter = function(writerID){
+        return $http.get(serviceBase + 'writer?id=' + writerID);
+    }
+
+    obj.insertwriter = function (writer) {
+    return $http.post(serviceBase + 'insertwriter', writer).then(function (results) {
+        return results;
+    });
+  };
+
+  obj.updatewriter = function (id,writer) {
+      console.log("in get app.js updating writer");
+      return $http.post(serviceBase + 'updatewriter', {id:id, writer:writer}).then(function (status) {
+          return status.data;
+      });
+  };
+
+  obj.deletewriter = function (id) {
+      return $http.delete(serviceBase + '0?id=' + id).then(function (status) {
+          return status.data;
+      });
+  };
+
+    return obj;   
+}]);
+
+
+
+   
+
   
-    public $data = "";
-    
-    const DB_SERVER = "localhost";
-    const DB_USER = "wpRootDatabase";
-    const DB_PASSWORD = "orthrox";
-    const DB = "whitepanda";
 
-    private $db = NULL;
-    private $mysqli = NULL;
-    public function __construct(){
-      parent::__construct();        // Init parent contructor
-      $this->dbConnect();         // Initiate Database connection
-    }
-    
-    /*
-     *  Connect to Database
-    */
-    private function dbConnect(){
-      $this->mysqli = new mysqli(self::DB_SERVER, self::DB_USER, self::DB_PASSWORD, self::DB);
-         
-    }
-    
-    /*
-     * Dynmically call the method based on the query string
-     */
-    public function processApi(){
-      $func = strtolower(trim(str_replace("/","",$_REQUEST['x'])));
-      if((int)method_exists($this,$func) > 0)
-        $this->$func();
-      else
-        $this->response('',404); // If the method not exist with in this class "Page not found".
-    }
-        
-    private function login(){
-      if($this->get_request_method() != "POST"){
-        $this->response('',406);
-      }
-      $email = $this->_request['email'];    
-      $password = $this->_request['pwd'];
-      if(!empty($email) and !empty($password)){
-        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-          $query="SELECT uid, name, email FROM users WHERE email = '$email' AND password = '".md5($password)."' LIMIT 1";
-          $r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
-
-          if($r->num_rows > 0) {
-            $result = $r->fetch_assoc();  
-            // If success everythig is good send header as "OK" and user details
-            $this->response($this->json($result), 200);
-          }
-          $this->response('', 204); // If no records "No Content" status
-        }
-      }
-      
-      $error = array('status' => "Failed", "msg" => "Invalid Email address or Password");
-      $this->response($this->json($error), 400);
-    }
-    
-    private function writers(){ 
-      if($this->get_request_method() != "GET"){
-        $this->response('',406);
-      }
-                        $query="SELECT distinct c.ID, c.email, c.expertArea, c.sampleExpertAreaText, c.mobileNo, c.address, c.city, c.state, c.zipCode, c.payGrade FROM writerprofile  c order by c.ID desc";
-      $r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
-
-      if($r->num_rows > 0){
-        $result = array();
-        while($row = $r->fetch_assoc()){
-          $result[] = $row;
-        }
-        $this->response($this->json($result), 200); // send user details
-      }
-      $this->response('',204);  // If no records "No Content" status
-      
-      echo 'new';
-    }
-    
-    private function writers_sample(){  
-      if($this->get_request_method() != "GET"){
-        $this->response('',406);
-      }
-      $query="SELECT distinct c.sampleExpertAreaText FROM writerprofile c order by c.ID desc";
-
-      $r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
-
-      if($r->num_rows > 0){
-        $result = array();
-        while($row = $r->fetch_assoc()){
-          $result[] = $row;
-        }
-        $this->response($this->json($result), 200); // send user details
-      }
-      $this->response('',204);  // If no records "No Content" status
-      
-      echo 'new';
-    }
-    
-    
-    
-    private function writer(){  
-      if($this->get_request_method() != "GET"){
-        $this->response('',406);
-      }
-      $id = (int)$this->_request['id'];
-      if($id > 0){  
-        $query="SELECT distinct c.writerNumber, c.writerName, c.email, c.address, c.city, c.state, c.postalCode, c.country FROM angularcode_writers c where c.writerNumber=$id";
-        $r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
-        if($r->num_rows > 0) {
-          $result = $r->fetch_assoc();  
-          $this->response($this->json($result), 200); // send user details
-        }
-      }
-      $this->response('',204);  // If no records "No Content" status
-    }
-    
-    private function insertwriter(){
-      if($this->get_request_method() != "POST"){
-        $this->response('',406);
-      }
-
-      $writer = json_decode(file_get_contents("php://input"),true);
-      $column_names = array('writerName', 'email', 'city', 'address', 'country');
-      $keys = array_keys($writer);
-      $columns = '';
-      $values = '';
-      foreach($column_names as $desired_key){ // Check the writer received. If blank insert blank into the array.
-         if(!in_array($desired_key, $keys)) {
-            $$desired_key = '';
-        }else{
-          $$desired_key = $writer[$desired_key];
-        }
-        $columns = $columns.$desired_key.',';
-        $values = $values."'".$$desired_key."',";
-      }
-      $query = "INSERT INTO angularcode_writers(".trim($columns,',').") VALUES(".trim($values,',').")";
-      if(!empty($writer)){
-        $r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
-        $success = array('status' => "Success", "msg" => "writer Created Successfully.", "data" => $writer);
-        $this->response($this->json($success),200);
-      }else
-        $this->response('',204);  //"No Content" status
-    }
-    private function updatewriter(){
-      if($this->get_request_method() != "POST"){
-        $this->response('',406);
-      }
-      $writer = json_decode(file_get_contents("php://input"),true);
-      
-      $id= (int)$writer['id'];
-      $paygrade=(string)$writer['writer']['payGrade'];
-      /*
-      $column_names = array('expertArea', 'sampleExpertAreaText', 'mobileNo','address', 'city','state','zipCode','payGrade');
-      $keys = array_keys($writer['writer']);
-      $columns = '';
-      $values = '';
-      foreach($column_names as $desired_key){ // Check the writer received. If key does not exist, insert blank into the array.
-         if(!in_array($desired_key, $keys)) {
-            $$desired_key = '';
-        }else{
-          $$desired_key = $writer['writer'][$desired_key];
-        }
-        $columns = $columns.$desired_key."='".$$desired_key."',";
-      }
-      */
-      $query = "UPDATE writerprofile SET payGrade = '$paygrade' WHERE ID = $id ";
-      if(!empty($writer)){
-        $r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
-        $success = array('status' => "Success", "msg" => "writer ".$id." Updated Successfully.", "paygrade" => $paygrade, "data" => $writer);
-        $this->response($this->json($success),200);
-      }else
-        $this->response('',204);  // "No Content" status
-    }
-    
-    private function deletewriter(){
-      if($this->get_request_method() != "DELETE"){
-        $this->response('',406);
-      }
-      $id = (int)$this->_request['id'];
-      if($id > 0){        
-        $query="DELETE FROM angularcode_writers WHERE writerNumber = $id";
-        $r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
-        $success = array('status' => "Success", "msg" => "Successfully deleted one record.");
-        $this->response($this->json($success),200);
-      }else
-        $this->response('',204);  // If no records "No Content" status
-    }
-    
-    /*
-     *  Encode array into JSON
-    */
-    private function json($data){
-      if(is_array($data)){
-        return json_encode($data);
-      }
-    }
-  }
+  app.controller('StoreController',function($scope, $http, $rootScope, services) {
   
-  // Initiiate Library
+
+
+                
+ 
+              
+            
+  services.getwriters().then(function(data){
+        $rootScope.writers = data.data;
+    });
+
+
+    // the code  below will be replaced by services code block
+
+
+  //  this.writers = gems;
+  });
+
+
+
+app.controller('MyCtrl', ['$scope', function($scope) {
+  $scope.modalShown = false;
+  $scope.toggleModal = function() {
+    $scope.modalShown = !$scope.modalShown;
+  };
+}]);
+
   
-  $api = new API;
-  $api->processApi();
-?>
+//ALL data to be retrieved from  database
+//dummy data used
+
+  var gems = [
+    {
+      isAssigned: true,
+      name: 'Dummywriter1',
+      email: "dummy@gmail.com",
+      area: "sports",
+      pay: 2,
+      sample: 'FC Bayern was founded in 1900 by eleven football players led by Franz John. Although Bayern won its first national championship in 1932,[5] the club was not selected for the Bundesliga at its inception in 1963.[6] The club had its period of greatest success in the middle of the 1970s when, under the captaincy of Franz Beckenbauer, it won the European Cup three times in a row (1974–76). Overall, Bayern has reached ten European Cup/UEFA Champions League finals, most recently winning their fifth title in 2013 as part of a continental treble. Bayern has also won one UEFA Cup, one European Cup Winners Cup, one UEFA Super Cup, one FIFA Club World Cup and two Intercontinental Cups, making it one of the most successful European clubs internationally. Since the formation of the Bundesliga, Bayern has been the dominant club in German football with 25 titles and has won 7 of the last 11 titles. They have traditional local rivalries with TSV 1860 München and 1. FC Nürnberg, as well as a contemporary rivalry with Borussia Dortmund.',
+      references: [
+        "Reference1",
+        "Reference2",
+        "Reference3"
+      ],
+
+      reviews: [{
+        levels: "Journey_man",
+        body: "I love this writer!",
+        author: "gen_editor@example.org"
+      }, {
+        levels: "Novice",
+        body: "This writer is bad.",
+        author: "maxxeditor@example.org"
+      }]
+    }, {
+      isAssigned: false,
+      name: 'Dummywriter2',
+      email: "dummy2@gmail.com",
+      area: 'cyber_security',
+      pay: 45,
+      sample: "Computer security, also known as cybersecurity or IT security, is security applied to computing devices such as computers and smartphones, as well as to both private and public computer networks, including the whole Internet. The field includes all the processes and mechanisms by which digital equipment, information and services are protected from unintended or unauthorized access, change or destruction, and is of growing importance due to the increasing reliance of computer systems in most societies.[1] It includes physical security to prevent theft of equipment and information security to protect the data on that equipment. Those terms generally do not refer to physical security, but a common belief among computer security experts is that a physical security breach is one of the worst kinds of security breaches as it generally allows full access to both data and equipment.",
+      references: [
+        "Reference4",
+        "Reference5",
+        "Reference6"
+      ],
+      reviews: [{
+        levels: "Veteran",
+        body: "I think this writer is good.",
+        author: "editor@example.org"
+      }, {
+        levels: "Novice",
+        body: "Simple and ok",
+        author: "editor2@example.org"
+      }]
+      }, {
+        isAssigned: false,
+        name: 'Dummywriter3',
+        email: "dummy3@gmail.com",
+        area: 'sports',
+        pay: 1000,
+        sample: 'FC Bayern was founded in 1900 by eleven football players led by Franz John. Although Bayern won its first national championship in 1932,[5] the club was not selected for the Bundesliga at its inception in 1963.[6] The club had its period of greatest success in the middle of the 1970s when, under the captaincy of Franz Beckenbauer, it won the European Cup three times in a row (1974–76). Overall, Bayern has reached ten European Cup/UEFA Champions League finals, most recently winning their fifth title in 2013 as part of a continental treble. Bayern has also won one UEFA Cup, one European Cup Winners Cup, one UEFA Super Cup, one FIFA Club World Cup and two Intercontinental Cups, making it one of the most successful European clubs internationally. Since the formation of the Bundesliga, Bayern has been the dominant club in German football with 25 titles and has won 7 of the last 11 titles. They have traditional local rivalries with TSV 1860 München and 1. FC Nürnberg, as well as a contemporary rivalry with Borussia Dortmund.',
+
+        references: [
+        "Reference7",
+        "Reference8",
+        "Reference9"
+        ],
+        reviews: [{
+          levels: "Veteran",
+          body: "too expensive for its rarity value.",
+          author: "editor34@example.org"
+        }, {
+          levels: "Veteran",
+          body: " High Quality.",
+          author: "editor35@example.org"
+        }, {
+          levels: "Novice",
+          body: "Don't waste your rubles!",
+          author: "editor39@example.org"
+        }]
+    }, {
+        isAssigned: false,
+        name: 'Dwriter3',
+        email: "du3@gmail.com",
+        area: 'sports',
+        pay: 8000000,
+        sample: 'FC Bayern was founded in 1900 by eleven football players led by Franz John. Although Bayern won its first national championship in 1932,[5] the club was not selected for the Bundesliga at its inception in 1963.[6] The club had its period of greatest success in the middle of the 1970s when, under the captaincy of Franz Beckenbauer, it won the European Cup three times in a row (1974–76). Overall, Bayern has reached ten European Cup/UEFA Champions League finals, most recently winning their fifth title in 2013 as part of a continental treble. Bayern has also won one UEFA Cup, one European Cup Winners Cup, one UEFA Super Cup, one FIFA Club World Cup and two Intercontinental Cups, making it one of the most successful European clubs internationally. Since the formation of the Bundesliga, Bayern has been the dominant club in German football with 25 titles and has won 7 of the last 11 titles. They have traditional local rivalries with TSV 1860 München and 1. FC Nürnberg, as well as a contemporary rivalry with Borussia Dortmund.',
+
+        references: [
+        "Reference12",
+        "Reference81",
+        "Reference91"
+        ],
+        reviews: [{
+          levels: "Veteran",
+          body: "too expensive for its rarity value.",
+          author: "editor34@example.org"
+        }, {
+          levels: "Veteran",
+          body: " High Quality.",
+          author: "editor35@example.org"
+        }, {
+          levels: "Novice",
+          body: "Don't waste your rubles!",
+          author: "editor39@example.org"
+        }]
+    },{
+        isAssigned: false,
+        name: 'Dummywriter5',
+        email: "dummy3@gmail.com",
+        area: 'medical',
+        pay: 0,
+        sample: 'FC Bayern was founded in 1900 by eleven football players led by Franz John. Although Bayern won its first national championship in 1932,[5] the club was not selected for the Bundesliga at its inception in 1963.[6] The club had its period of greatest success in the middle of the 1970s when, under the captaincy of Franz Beckenbauer, it won the European Cup three times in a row (1974–76). Overall, Bayern has reached ten European Cup/UEFA Champions League finals, most recently winning their fifth title in 2013 as part of a continental treble. Bayern has also won one UEFA Cup, one European Cup Winners Cup, one UEFA Super Cup, one FIFA Club World Cup and two Intercontinental Cups, making it one of the most successful European clubs internationally. Since the formation of the Bundesliga, Bayern has been the dominant club in German football with 25 titles and has won 7 of the last 11 titles. They have traditional local rivalries with TSV 1860 München and 1. FC Nürnberg, as well as a contemporary rivalry with Borussia Dortmund.',
+
+        references: [
+        "Reference72222",
+        "Reference823",
+        "Reference923"
+        ],
+        reviews: [{
+          levels: "Veteran",
+          body: "too expensive for its rarity value.",
+          author: "editor34@example.org"
+        }, {
+          levels: "Veteran",
+          body: " High Quality.",
+          author: "editor35@example.org"
+        }, {
+          levels: "Novice",
+          body: "Don't waste your rubles!",
+          author: "editor39@example.org"
+        }]
+    }
+  ];
+
+ 
+
+
+
+
+
+})();
