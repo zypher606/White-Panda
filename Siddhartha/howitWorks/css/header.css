@@ -1,0 +1,319 @@
+/* Navigation Bar */
+#header
+{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 44.6px;
+    z-index: 100;
+	
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.6);
+    background: #002542; /* Old browsers */
+    background: -moz-linear-gradient(left,  #002542 0%, #1d3e55 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#002542), color-stop(100%,#1d3e55)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #002542 0%,#1d3e55 100%); /* IE10+ */
+    background: linear-gradient(to right,  #002542 0%,#1d3e55 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002542', endColorstr='#1d3e55',GradientType=1 ); /* IE6-9 */
+
+    
+    /*  
+    background: #4e69a2;  
+    background: -moz-linear-gradient(left,  #4e69a2 0%, #3c5998 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4e69a2), color-stop(100%,#3c5998)); 
+    background: -webkit-linear-gradient(top,  #4e69a2 0%,#3c5998 100%);
+    background: -o-linear-gradient(top,  #4e69a2 0%,#3c5998 100%);
+    background: -ms-linear-gradient(top,  #4e69a2 0%,#3c5998 100%);
+    background: linear-gradient(to bottom,  #4e69a2 0%,#3c5998 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e69a2', endColorstr='#3c5998',GradientType=1 );
+
+   */
+}
+
+#home img
+{
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    height: 44.6px;
+    width: 190.26px;
+    z-index: 100;
+    transition: 0.4s;
+}
+
+.nav-bar
+{
+/*    Positioning */
+    position: relative;
+    top: 0%;
+    float: right;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    height: 50px;
+    display: block;
+
+/*    UI */
+    font-family: neoteric, sans-serif;
+}
+
+/* Positioning */
+.nav-bar ul
+{
+    list-style: none;
+    text-align: left;
+    margin-top: -3px;
+    padding: 0;
+    font-size: 12px;
+    margin-right: 40px;
+    color: red;
+}
+
+.nav-bar ul li
+{
+    float: right;
+    padding: 18px 10px;
+    margin: 0 10px;
+    height: 0px;
+    transition: height 0.2s;
+}
+
+.nav-bar ul li:hover
+{
+    height: 50px;
+    background: #ffffff;   
+}
+
+
+
+
+.nav-bar ul li ul
+{
+    position: absolute;
+    background: #fff;
+    margin-left: -10px;
+    margin-top: 11px;
+    padding-bottom: 15px;
+    padding-right: 4px;
+    height: 0;
+   
+    transform: rotateX(90deg);
+    transition: 0.15s;
+}
+
+
+.nav-bar ul li ul li
+{
+    
+    
+    float: left;
+}
+
+/* Link styling and hover effects */
+.nav-bar a
+{
+/*    font-family: Champ;*/
+    font-size: 1.3em;
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+    transition: 0.4s;
+}
+.nav-bar ul li:hover a
+{
+    color: black;
+    opacity: 1;
+}
+
+.nav-bar ul li:hover ul
+{
+    display: block;
+    transform: rotateX(0deg);
+    height: auto;
+}
+
+.nav-bar ul li:hover ul li
+{
+    height: 0;
+    
+    background: transparent;
+    
+}
+
+.nav-bar ul li ul li a:hover
+{
+    color: #2eb161;
+/*    color: #626262;*/
+}
+
+.nav-bar ul li img
+{
+    height: 95%;
+    
+}
+
+
+
+
+
+
+#but
+{
+    height:20%;
+    
+    transition: 0.7s;
+    
+    
+}
+
+#but img
+{
+    height: 260%;
+}  
+
+#but:hover
+{
+    background:  orange;
+}
+
+
+
+
+
+
+
+/*NEWW*/
+
+
+
+.side_menu ul li img
+{
+    position: absolute;
+    height: 3.5%;
+    right: 15%;
+    
+   
+}
+
+.side_menu ul li ul
+{
+    display: none;
+}
+
+
+
+
+
+/*NEWW*/
+
+
+
+
+
+
+.side_menu
+{
+    position: absolute;
+    top: 100%;
+    right: -28%;
+    
+    height: 1500%;
+    width: 25%;
+  
+    background-color:rgba(29,62,85,0.94); 
+    
+    
+}
+.side_menu ul
+{
+    list-style-type: none;
+    
+    
+}
+
+.side_menu ul li
+{
+    padding-bottom: 3%;
+    padding-top: 2%;
+    padding-right: 0.1%;
+    
+}
+
+.side_menu a
+{
+    text-decoration: none;
+    color: black;
+    font-family: 'PT sans';
+}
+#b1
+[
+    transition: 0.7s;
+]
+
+.icon-bar{
+	background:#FFFFFF;
+}
+
+/*mine*/
+
+.nav{
+	font-family:neoteric, sans-serif;
+}
+
+.nav:hover{
+	color:rgb(0,0,0);
+}
+
+ ul li:hover
+{
+    height: 50px;
+    background: #ffffff;   
+	color:black;
+}
+
+.navbar a
+{
+/*    font-family: Champ;*/
+
+    text-decoration: none;
+    color:white;
+    transition: 0.4s;
+}
+
+.navbar ul li:hover a
+{
+    color: #000000; /*login and sign up k andar wala business writer*/
+    opacity: 1;
+}
+
+.navbar ul li:hover ul
+{
+    display: block;
+    transform: rotateX(0deg);
+    height: auto;
+	color:black;
+}
+
+.navbar ul li:hover ul li
+{
+    height: 35;
+    color:#FFFFFF;
+    background: transparent;
+    
+}
+
+.navbar ul li ul li a:hover
+{
+    color: #2eb161;
+/*    color: #626262;*/
+}
+
+.navbar ul li img
+{
+    height: 100%;
+    color:black;
+}
+
+
