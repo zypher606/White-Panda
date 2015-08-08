@@ -1,0 +1,120 @@
+  <!DOCTYPE html>
+  <html ng-app="gemStore">
+    <head>
+    
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+      
+      <link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <script type="text/javascript" 
+  src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="angular.min.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+     <script type="text/javascript" src="writers.js"></script>
+        
+
+
+
+    </head>
+
+    <body ng-controller="StoreController as store">
+      <!--  Store Header  -->
+      <header>
+          <h1 class="text-center">Welcome Editors !</h1>
+        <h2 class="text-center"> List of Writers </h2>
+      </header>
+   
+
+<form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i></div>
+        
+        <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
+      </div>      
+    </div>
+  </form>
+   
+     
+     
+        <!--  product Container  -->
+
+     <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Area of expertise</th>
+        <th>Details</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+   
+      <tr  ng-repeat="writer in writers | filter:searchWriter">
+       
+        <td>{{writer.ID}} </td>
+        <td>{{writer.email}}</td>
+         <td>{{writer.expertArea}}</td>
+
+        <td>           
+  <div class="row header">
+             <button class="btn btn-success" type="button"  data-toggle="modal" 
+   data-target="#PostCommentsModal{{$index}}"> Editor Options</button>
+            
+   <div class="modal fade" id="PostCommentsModal{{$index}}" tabindex="-1" 
+     role="dialog" aria-labelledby="helpModalLabel"     aria-hidden="true">
+      <div class="modal-dialog">      
+         <div class="modal-content">
+              <div class="modal-header">
+                          <button type="button" class="close" 
+                          data-dismiss="modal">
+                              <span aria-hidden="true">&times;
+                              </span><span class="sr-only">
+                              Close</span></button>
+                            <h4 class="modal-title" >
+                              Editor Options</h4>
+                         
+                  </div>
+                  <div class="modal-body">
+
+                           <writer-tabs></writer-tabs>
+                  </div>
+                   <div class="modal-footer">
+                        <button type="button" 
+                        class="btn btn-default" data-dismiss="modal">
+                            Close</button>
+                    </div>
+                     
+          </div>
+        </div>
+     </div>
+  </div>
+             
+         </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+      </div>
+    </body>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

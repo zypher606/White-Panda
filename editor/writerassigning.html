@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html ng-app="gem_Store">
+  <head>
+    <link rel="stylesheet" href="magnific-popup.css"> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="jquery.magnific-popup.js"></script>
+
+    <link href="css/editorportal.css" rel="stylesheet">
+  
+   
+          
+
+   <link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <script type="text/javascript" 
+src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   
+    <script type="text/javascript" src="angular.min.js"></script>
+          <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="assign_app.js"></script>
+   <script type="text/javascript" src="writers.js"></script>
+      
+
+
+
+  </head>
+
+    <script>
+        $(document).ready(function(){
+             // pop up .popover-test
+        $('.popover-test').popover();    
+        
+        // pop up #example1, #example2, #example3 with same content
+       $('[rel=popover]').popover({ 
+        html : true, 
+        content: function() {
+          return $('#popover_content_wrapper').html();
+        }
+    });
+
+            $('[data-toggle="popover"]').popover();   
+        });
+     </script>
+
+  <body ng-controller="Store_Controller as stor">
+    <!--  Store Header  -->
+    <header>
+      <h1 class="text-center">Welcome Editors!</h1>
+      <h2 class="text-center"> Assign  Writers </h2>
+    </header>
+ 
+
+<form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i></div>
+
+        <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
+      </div>      
+    </div>
+  </form>
+   
+   
+      <!--  product Container  -->
+
+   <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Budget</th>
+      <th>Brief</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <!--     <tr  ng-repeat="writer in store.writers |  filter: { area: 'sports' }">
+ -->
+    <tr  ng-repeat="order in stor.orders |  filter: searchWriter">
+     
+      <td>{{order.area}} </td>
+      <td>{{order.budget}}</td>
+       <td>{{ order.job_description | limitTo: 25 }}{{myString.length > 25 ? '...' : ''}}...
+
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="popover" title="Job Description"data-content="{{ order.job_description }}">More</button>
+</td>
+
+      <td>           
+          <div class="row header">
+           <button class="btn btn-success" type="button"  data-toggle="modal" 
+ data-target="#filteredwriters"> Assign Writers</button>
+          
+        
+           </div>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+            
+
+
+ <div class="modal fade" id="filteredwriters" tabindex="-1" 
+           role="dialog" aria-labelledby="helpModalLabel"     aria-hidden="true">
+            <div class="modal-dialog">      
+         <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" 
+                        data-dismiss="modal">
+                            <span aria-hidden="true">&times;
+                            </span><span class="sr-only">
+                            Close</span></button>
+                          <h4 class="modal-title" >
+                           filtered writers</h4>
+                       
+                     </div>
+             <div class="modal-body">
+
+              <div ng-controller="StoreController as store">
+
+         <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i></div>
+        
+        <input type="text" class="form-control" placeholder="filter by Area of expertise" ng-model="searchWriter">
+      </div>      
+    </div>
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Area of expertise</th>
+        <th>Reviews</th>
+        <th>VIEW  uploaded Files <th>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+
+   
+
+      <tr  ng-repeat="writer in store.writers | filter:searchWriter ">
+       
+        <td style="white-space:nowrap;"> <input type="checkbox" name="response" ng-model="writer.isAssigned" ng-value="true" ng-click="Update"/>--{{writer.name}} </td>
+        <td>{{writer.email}}</td>
+         <td>{{writer.area}}</td>
+
+        <td>           
+  <div class="row header">
+     &nbsp<button type="button" class="btn btn-default btn-xs dropdown-toggle" id="example1" rel="popover" data-original-title="Reviews">
+               Reviews</button>
+
+        <div id="popover_content_wrapper" style="display: none">
+          <li ng-repeat="review in writer.reviews">
+               
+                  <strong>{{review.levels}} level</strong>
+               
+                  <cite class="clearfix"> reviwed by {{review.author}} </cite>
+       
+              </li>
+        </div>
+            
+   
+  </div>
+             
+         </td>
+        
+         <td>
+           <button type="button" class="btn btn-danger btn-xs" ng-disabled="!writer.isAssigned">View</button>
+         </td>
+
+      </tr>
+    </tbody>
+  </table>
+              </div>
+
+                     
+      
+         
+        
+       
+               </div>
+                   
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
